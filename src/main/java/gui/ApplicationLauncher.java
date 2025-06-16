@@ -13,7 +13,7 @@ public class ApplicationLauncher {
 	public static void main(String[] args) {
 		EventQueue.invokeLater(() -> {
 			try {
-				// ConfiguraciÃ³n de la apariencia de la interfaz
+				// Configuración de la apariencia de la interfaz
 				UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
 
 				DataAccess dataAccess = new DataAccess();  // o como lo hayas definido

@@ -98,9 +98,7 @@ public class DataAccess  {
 		   int month=today.get(Calendar.MONTH);
 		   if (month==12) { month=1;}  
 	    
-		   
-		    //Create drivers 
-		  
+		
 			
 			//Crear socios
 			System.out.println("[DEBUG] Creando socio de prueba...");
