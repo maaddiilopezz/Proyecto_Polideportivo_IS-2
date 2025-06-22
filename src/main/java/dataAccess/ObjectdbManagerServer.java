@@ -17,9 +17,6 @@ import javax.swing.JTextArea;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-/**
- * It runs the database server as a separate process.
- */
 public class ObjectdbManagerServer extends JDialog {
 
 
@@ -28,14 +25,8 @@ public class ObjectdbManagerServer extends JDialog {
 	JTextArea textArea;
 	ConfigXML c;
 	
-	//For windows
-    private String objectDbpath="src\\main\\resources\\objectdb.jar";
-    
-    //For mac 
-    //private String objectDbpath="src//main//resources//objectdb.jar";
-
- 	
-
+	
+    private String objectDbpath="src/main/resources/objectdb-2.9.4/bin/objectdb-2.9.4.jar";
 
 	public static void main(String[] args) {
 		try {
@@ -106,27 +97,42 @@ public class ObjectdbManagerServer extends JDialog {
 			textArea.append("\nERROR, the database is configured as local");
 		}
 		else {
-		try{
-			System.out.println("Lauching objectdb server");
+        try{
+            System.out.println("Lauching objectdb server");
 
-			
-			try {
-		    	Runtime.getRuntime().exec("java -cp "+objectDbpath+" com.objectdb.Server -port "+ c.getDatabasePort()+" start");
-		    } catch (Exception ioe) {
-		    	System.out.println (ioe);
-		    }
+            try {
+                String command = "java -cp " + objectDbpath + " com.objectdb.Server -port " + c.getDatabasePort() + " start";
+                System.out.println("[DEBUG] Lanzando comando: " + command);
+                Process process = Runtime.getRuntime().exec(command);
+                // Leer la salida estándar y de error del proceso
+                java.io.BufferedReader stdInput = new java.io.BufferedReader(new java.io.InputStreamReader(process.getInputStream()));
+                java.io.BufferedReader stdError = new java.io.BufferedReader(new java.io.InputStreamReader(process.getErrorStream()));
+                String s;
+                textArea.append("\n[INFO] Salida del servidor ObjectDB:\n");
+                while ((s = stdInput.readLine()) != null) {
+                    textArea.append(s + "\n");
+                    System.out.println(s);
+                }
+                textArea.append("\n[INFO] Errores del servidor ObjectDB:\n");
+                while ((s = stdError.readLine()) != null) {
+                    textArea.append(s + "\n");
+                    System.err.println(s);
+                }
+            } catch (Exception ioe) {
+                System.out.println (ioe);
+                textArea.append("\n[ERROR] Error lanzando el servidor ObjectDB: " + ioe.getMessage());
+            }
 
-		    textArea.append("\nAccess granted to: "+c.getUser());
-		    
-			textArea.append("\nPress button to exit this database server... ");
-			
-		} catch (Exception e) {
-			textArea.append("Something has happened in ObjectDbManagerServer: "+e.toString());
+            textArea.append("\nAccess granted to: "+c.getUser());
+            textArea.append("\nPress button to exit this database server... ");
 
-		}
+        } catch (Exception e) {
+            textArea.append("Something has happened in ObjectDbManagerServer: "+e.toString());
+
+        }
 		
 		}
 	}
 
 }
-	
+

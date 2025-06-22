@@ -112,7 +112,6 @@ public class IniciarSesionGUI extends JFrame {
         ButtonGroup group = new ButtonGroup();
         group.add(botonSocio);
         group.add(botonEncargado);
-        // Acción del botón Aceptar
         botonAceptar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 String correo = textCorreo.getText();

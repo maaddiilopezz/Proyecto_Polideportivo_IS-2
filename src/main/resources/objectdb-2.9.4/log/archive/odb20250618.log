@@ -1,0 +1,17 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-18 15:07:33 #1 server] 
+Server on port 6137 has started by 34832@Iaz7pc
+
+[2025-06-18 15:07:36 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS-2\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 34832@Iaz7pc
+
+[2025-06-18 15:07:36 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS-2\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-18 15:07:58 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS-2\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 34832@Iaz7pc
+
+[2025-06-18 15:08:00 #5 server] 
+Server on port 6137 has stopped by 34832@Iaz7pc
+

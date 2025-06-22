@@ -26,11 +26,9 @@ public class InicioInvitadoGUI extends JFrame {
         contentPane = new JPanel(new BorderLayout(10, 10));
         setContentPane(contentPane);
 
-        // ComboBox de actividades
         comboActividades = new JComboBox<>();
         contentPane.add(comboActividades, BorderLayout.NORTH);
 
-        // Tabla de sesiones
         modeloTabla = new DefaultTableModel();
         modeloTabla.setColumnIdentifiers(new String[] {
             ResourceBundleUtil.getString("inicioInvitado.columna.fecha"),
@@ -42,7 +40,6 @@ public class InicioInvitadoGUI extends JFrame {
         JScrollPane scrollPane = new JScrollPane(tablaSesiones);
         contentPane.add(scrollPane, BorderLayout.CENTER);
 
-        // Botón Atrás
         JButton botonAtras = new JButton("\u2190");
         botonAtras.setToolTipText(ResourceBundleUtil.getString("tooltip.atras"));
         botonAtras.setBounds(10, 10, 50, 25);
@@ -52,13 +49,11 @@ public class InicioInvitadoGUI extends JFrame {
             dispose();
         });
 
-        // Cargar actividades en combo
         List<Actividad> actividades = facade.getActividades(); // Suponiendo que tienes este método
         for (Actividad act : actividades) {
             comboActividades.addItem(act);
         }
 
-        // Acción al seleccionar una actividad
         comboActividades.addActionListener(e -> {
             Actividad actividadSeleccionada = (Actividad) comboActividades.getSelectedItem();
             if (actividadSeleccionada != null) {

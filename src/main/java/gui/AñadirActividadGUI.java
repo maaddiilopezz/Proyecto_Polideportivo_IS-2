@@ -14,7 +14,7 @@ public class AñadirActividadGUI extends JFrame {
     private BLFacade facade = InicioGUI.getBusinessLogic();
 
     public AñadirActividadGUI() {
-        setTitle(ResourceBundleUtil.getString("AñadirActividadGUI.Titulo"));
+        setTitle(ResourceBundleUtil.getString("AnadirActividadGUI.Titulo"));
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setBounds(100, 100, 400, 250);
         JPanel contentPane = new JPanel();
@@ -22,7 +22,7 @@ public class AñadirActividadGUI extends JFrame {
         setContentPane(contentPane);
         contentPane.setLayout(null);
 
-        JLabel lblNombre = new JLabel(ResourceBundleUtil.getString("AñadirActividadGUI.Nombre"));
+        JLabel lblNombre = new JLabel(ResourceBundleUtil.getString("AnadirActividadGUI.Nombre"));
         lblNombre.setBounds(30, 30, 120, 25);
         contentPane.add(lblNombre);
 
@@ -31,7 +31,7 @@ public class AñadirActividadGUI extends JFrame {
         contentPane.add(textNombre);
         textNombre.setColumns(10);
 
-        JLabel lblNivel = new JLabel(ResourceBundleUtil.getString("AñadirActividadGUI.Nivel"));
+        JLabel lblNivel = new JLabel(ResourceBundleUtil.getString("AnadirActividadGUI.Nivel"));
         lblNivel.setBounds(30, 70, 120, 25);
         contentPane.add(lblNivel);
 
@@ -39,7 +39,7 @@ public class AñadirActividadGUI extends JFrame {
         comboNivel.setBounds(170, 70, 60, 25);
         contentPane.add(comboNivel);
 
-        JLabel lblPrecio = new JLabel(ResourceBundleUtil.getString("AñadirActividadGUI.Precio"));
+        JLabel lblPrecio = new JLabel(ResourceBundleUtil.getString("AnadirActividadGUI.Precio"));
         lblPrecio.setBounds(30, 110, 120, 25);
         contentPane.add(lblPrecio);
 
@@ -48,7 +48,7 @@ public class AñadirActividadGUI extends JFrame {
         contentPane.add(textPrecio);
         textPrecio.setColumns(10);
 
-        JButton btnCrear = new JButton(ResourceBundleUtil.getString("AñadirActividadGUI.Crear"));
+        JButton btnCrear = new JButton(ResourceBundleUtil.getString("AnadirActividadGUI.Crear"));
         btnCrear.setBounds(120, 150, 150, 30);
         contentPane.add(btnCrear);
 
@@ -71,7 +71,7 @@ public class AñadirActividadGUI extends JFrame {
             Integer nivel = (Integer) comboNivel.getSelectedItem();
             String precioStr = textPrecio.getText().trim();
             if (nombre.isEmpty()) {
-                mensaje.setText("El nombre no puede estar vacío.");
+                mensaje.setText(ResourceBundleUtil.getString("AnadirActividadGUI.ErrorNombreVacio"));
                 return;
             }
             double precio;
@@ -79,13 +79,13 @@ public class AñadirActividadGUI extends JFrame {
                 precio = Double.parseDouble(precioStr);
                 if (precio < 0) throw new NumberFormatException();
             } catch (NumberFormatException ex) {
-                mensaje.setText("Introduce un precio válido (número positivo).");
+                mensaje.setText(ResourceBundleUtil.getString("AnadirActividadGUI.ErrorPrecio"));
                 return;
             }
             try {
                 facade.crearActividad(nombre, nivel, precio);
                 mensaje.setForeground(new Color(0,128,0));
-                mensaje.setText("¡Actividad creada correctamente!");
+                mensaje.setText(ResourceBundleUtil.getString("AnadirActividadGUI.Creada"));
                 textNombre.setText("");
                 comboNivel.setSelectedIndex(0);
                 textPrecio.setText("");
@@ -94,7 +94,7 @@ public class AñadirActividadGUI extends JFrame {
                 mensaje.setText(ex.getMessage());
             } catch (Exception ex) {
                 mensaje.setForeground(Color.RED);
-                mensaje.setText("Error inesperado: " + ex.getMessage());
+                mensaje.setText(ResourceBundleUtil.getString("AnadirActividadGUI.Error") + ": " + ex.getMessage());
             }
         });
     }

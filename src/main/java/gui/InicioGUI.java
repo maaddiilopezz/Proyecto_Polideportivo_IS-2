@@ -28,7 +28,7 @@ public class InicioGUI extends JFrame {
 	BLFacade facade = InicioGUI.getBusinessLogic(); 
 
 	
-    private static BLFacade appFacadeInterface;
+	private static BLFacade appFacadeInterface;
 
 	public static BLFacade getBusinessLogic(){
 		return appFacadeInterface;
@@ -59,12 +59,13 @@ public class InicioGUI extends JFrame {
 		contentPane.add(continuarComoInvitadoBoton);
 
 		botonIngles = new JRadioButton("English");
-		botonIngles.setBounds(43, 223, 70, 23);
+		botonIngles.setBounds(43, 223, 100, 23); // Ampliado el ancho de 70 a 100
 		contentPane.add(botonIngles);
 
 		botonCastellano = new JRadioButton("Castellano");
 		botonCastellano.setBounds(162, 223, 103, 23);
 		contentPane.add(botonCastellano);
+		botonCastellano.setSelected(true);
 
 		botonEuskera = new JRadioButton("Euskera");
 		botonEuskera.setBounds(314, 223, 81, 23);
@@ -75,21 +76,18 @@ public class InicioGUI extends JFrame {
 		grupoIdiomas.add(botonCastellano);
 		grupoIdiomas.add(botonEuskera);
 		
-		// Acción botón iniciar sesión
 		iniciarSesionBoton.addActionListener(e -> {
 			IniciarSesionGUI iniciarVentana = new IniciarSesionGUI();
 			iniciarVentana.setVisible(true);
 			dispose();
 		});
 
-		// Acción botón registrarse
 		registrarseBoton.addActionListener(e -> {
 			RegistrarGUI registroVentana = new RegistrarGUI();
 			registroVentana.setVisible(true);
 			dispose();
 		});
 
-		// Acción botón continuar como invitado
 		continuarComoInvitadoBoton.addActionListener(e -> {
 			InicioInvitadoGUI invitadoVentana = new InicioInvitadoGUI();
 			invitadoVentana.setVisible(true);
@@ -97,27 +95,27 @@ public class InicioGUI extends JFrame {
 		});
 		
 		botonIngles.addActionListener(e -> {
-            ResourceBundleUtil.setLocale(new Locale("en"));
-            actualizarTextos();
-        });
-        botonCastellano.addActionListener(e -> {
-            ResourceBundleUtil.setLocale(new Locale("es"));
-            actualizarTextos();
-        });
-        botonEuskera.addActionListener(e -> {
-            ResourceBundleUtil.setLocale(new Locale("eus"));
-            actualizarTextos();
-        });
+			ResourceBundleUtil.setLocale(new Locale("en"));
+			actualizarTextos();
+		});
+		botonCastellano.addActionListener(e -> {
+			ResourceBundleUtil.setLocale(new Locale("es"));
+			actualizarTextos();
+		});
+		botonEuskera.addActionListener(e -> {
+			ResourceBundleUtil.setLocale(new Locale("eus"));
+			actualizarTextos();
+		});
 
-    }
+	}
 
-    private void actualizarTextos() {
-        iniciarSesionBoton.setText(ResourceBundleUtil.getString("InicioGUI.IniciarSesion"));
-        registrarseBoton.setText(ResourceBundleUtil.getString("InicioGUI.Registrarse"));
-        continuarComoInvitadoBoton.setText(ResourceBundleUtil.getString("InicioGUI.ContinuarComoInvitado"));
-        botonIngles.setText("English");
-        botonCastellano.setText("Castellano");
-        botonEuskera.setText("Euskera");
-        setTitle(ResourceBundleUtil.getString("MainGUI.MainTitle"));
-    }
+	private void actualizarTextos() {
+		iniciarSesionBoton.setText(ResourceBundleUtil.getString("InicioGUI.IniciarSesion"));
+		registrarseBoton.setText(ResourceBundleUtil.getString("InicioGUI.Registrarse"));
+		continuarComoInvitadoBoton.setText(ResourceBundleUtil.getString("InicioGUI.ContinuarComoInvitado"));
+		botonIngles.setText("English");
+		botonCastellano.setText("Castellano");
+		botonEuskera.setText("Euskera");
+		setTitle(ResourceBundleUtil.getString("MainGUI.MainTitle"));
+	}
 }

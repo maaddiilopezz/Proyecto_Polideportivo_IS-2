@@ -109,7 +109,7 @@ public class BusinessLogicServer extends JDialog {
 				
 				Endpoint.publish(service, new BLFacadeImplementation());
 				
-				
+				System.out.println("SERVICE PUBLISHED: " + service);
 			}
 			catch (Exception e) {
 				System.out.println("Error in BusinessLogicServer: "+e.toString());

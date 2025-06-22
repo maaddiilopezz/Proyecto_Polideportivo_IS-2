@@ -1,0 +1,374 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-21 09:10:23 #1 server] 
+Server on port 6137 has started by 14970@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 09:10:34 #2 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is opened by 14970@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 09:10:34 #3 store] 
+Configuration path: /Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/objectdb.conf
+
+[2025-06-21 09:10:59 #4 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is closed by 14970@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 09:40:24 #5 server] 
+Server on port 6137 has stopped by 14970@MacBook-Air-de-Maddi-5.local
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-21 09:42:05 #1 server] 
+Server on port 6137 has started by 22598@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 09:42:11 #2 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is opened by 22598@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 09:42:11 #3 store] 
+Configuration path: /Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/objectdb.conf
+
+[2025-06-21 09:42:25 #4 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is closed by 22598@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 09:42:46 #5 server] 
+Server on port 6137 has stopped by 22598@MacBook-Air-de-Maddi-5.local
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-21 09:43:34 #1 server] 
+Server on port 6137 has started by 22959@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 09:43:39 #2 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is opened by 22959@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 09:43:39 #3 store] 
+Configuration path: /Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/objectdb.conf
+
+[2025-06-21 09:46:02 #4 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is closed by 22959@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 09:46:02 #5 server] 
+Server on port 6137 has stopped by 22959@MacBook-Air-de-Maddi-5.local
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-21 09:46:43 #1 server] 
+Server on port 6137 has started by 23653@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 09:46:46 #2 server] 
+Server on port 6137 has stopped by 23653@MacBook-Air-de-Maddi-5.local
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-21 09:47:08 #1 server] 
+Server on port 6137 has started by 23762@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 09:47:12 #2 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is opened by 23762@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 09:47:12 #3 store] 
+Configuration path: /Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/objectdb.conf
+
+[2025-06-21 09:47:56 #4 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is closed by 23762@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 09:48:35 #5 server] 
+Server on port 6137 has stopped by 23762@MacBook-Air-de-Maddi-5.local
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-21 09:50:00 #1 server] 
+Server on port 6137 has started by 24348@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 09:50:07 #2 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is opened by 24348@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 09:50:07 #3 store] 
+Configuration path: /Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/objectdb.conf
+
+[2025-06-21 09:50:32 #4 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is closed by 24348@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 09:50:50 #5 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is opened by 24348@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 09:50:50 #6 store] 
+Configuration path: /Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/objectdb.conf
+
+[2025-06-21 09:51:00 #7 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is closed by 24348@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 09:51:00 #8 server] 
+Server on port 6137 has stopped by 24348@MacBook-Air-de-Maddi-5.local
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-21 19:28:02 #1 server] 
+Server on port 6137 has started by 75055@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 19:28:37 #2 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is opened by 75055@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 19:28:37 #3 store] 
+Configuration path: /Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/objectdb.conf
+
+[2025-06-21 19:28:42 #4 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is closed by 75055@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 19:29:14 #5 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is opened by 75055@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 19:29:14 #6 store] 
+Configuration path: /Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/objectdb.conf
+
+[2025-06-21 19:29:17 #7 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is closed by 75055@MacBook-Air-de-Maddi-5.local
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-21 19:31:58 #1 server] 
+Server on port 6137 has started by 77427@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 19:32:42 #2 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is opened by 77427@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 19:32:42 #3 store] 
+Configuration path: /Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/objectdb.conf
+
+[2025-06-21 19:32:45 #4 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is closed by 77427@MacBook-Air-de-Maddi-5.local
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-21 19:33:13 #1 server] 
+java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:565)
+	at java.base/sun.nio.ch.Net.bind(Net.java:554)
+	at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:636)
+	at java.base/java.net.ServerSocket.bind(ServerSocket.java:391)
+	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:278)
+	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:222)
+	at com.objectdb.o.SMR.o(SMR.java:260)
+	at com.objectdb.o.SMR.f(SMR.java:160)
+	at com.objectdb.o.TOL.run(TOL.java:117)
+	at com.objectdb.Server.runCommand(Server.java:200)
+	at com.objectdb.Server.run(Server.java:104)
+	at com.objectdb.Server.main(Server.java:63)
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-21 19:35:19 #1 server] 
+Server on port 6137 has started by 78640@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 19:39:05 #2 server] 
+Server on port 6137 has stopped by 78640@MacBook-Air-de-Maddi-5.local
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-21 19:40:25 #1 server] 
+Server on port 6137 has started by 80559@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 19:40:51 #2 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is opened by 80559@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 19:40:51 #3 store] 
+Configuration path: /Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/objectdb.conf
+
+[2025-06-21 19:43:17 #4 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is closed by 80559@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 19:43:17 #5 server] 
+Server on port 6137 has stopped by 80559@MacBook-Air-de-Maddi-5.local
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-21 19:46:31 #1 server] 
+Server on port 6137 has started by 81595@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 19:46:42 #2 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is opened by 81595@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 19:46:42 #3 store] 
+Configuration path: /Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/objectdb.conf
+
+[2025-06-21 19:52:19 #4 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is closed by 81595@MacBook-Air-de-Maddi-5.local
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-21 19:53:11 #1 server] 
+Server on port 6137 has started by 84278@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 19:53:15 #2 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is opened by 84278@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 19:53:15 #3 store] 
+Configuration path: /Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/objectdb.conf
+
+[2025-06-21 19:57:55 #4 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is closed by 84278@MacBook-Air-de-Maddi-5.local
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-21 19:58:07 #1 server] 
+java.net.BindException: Address already in use (Bind failed)
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:513)
+	at java.net.ServerSocket.bind(ServerSocket.java:375)
+	at java.net.ServerSocket.<init>(ServerSocket.java:237)
+	at java.net.ServerSocket.<init>(ServerSocket.java:181)
+	at com.objectdb.o.SMR.o(SMR.java:260)
+	at com.objectdb.o.SMR.f(SMR.java:160)
+	at com.objectdb.o.TOL.run(TOL.java:117)
+	at com.objectdb.Server.runCommand(Server.java:200)
+	at com.objectdb.Server.run(Server.java:104)
+	at com.objectdb.Server.main(Server.java:63)
+
+[2025-06-21 19:58:14 #5 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is opened by 84278@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 19:58:14 #6 store] 
+Configuration path: /Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/objectdb.conf
+
+[2025-06-21 19:59:11 #7 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is closed by 84278@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 19:59:11 #8 server] 
+Server on port 6137 has stopped by 84278@MacBook-Air-de-Maddi-5.local
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-21 19:59:21 #1 server] 
+Server on port 6137 has started by 85624@MacBook-Air-de-Maddi-5.local
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-21 19:59:42 #1 server] 
+Server on port 6137 has started by 85768@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 19:59:46 #2 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is opened by 85768@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 19:59:46 #3 store] 
+Configuration path: /Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/objectdb.conf
+
+[2025-06-21 20:01:00 #4 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is closed by 85768@MacBook-Air-de-Maddi-5.local
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-21 20:01:26 #1 server] 
+Server on port 6137 has started by 86161@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 20:01:31 #2 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is opened by 86161@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 20:01:31 #3 store] 
+Configuration path: /Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/objectdb.conf
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-21 20:05:03 #1 server] 
+Server on port 6137 has started by 86591@MacBook-Air-de-Maddi-5.local
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-21 20:05:18 #1 server] 
+Server on port 6137 has started by 86604@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 20:05:23 #2 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is opened by 86604@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 20:05:23 #3 store] 
+Configuration path: /Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/objectdb.conf
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-21 20:09:33 #1 server] 
+Server on port 6137 has started by 87481@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 20:09:38 #2 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' has been recovered (tr. 13-13)
+
+[2025-06-21 20:09:38 #3 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is opened by 87481@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 20:09:38 #4 store] 
+Configuration path: /Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/objectdb.conf
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-21 20:14:55 #1 server] 
+Server on port 6137 has started by 88240@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 20:15:00 #2 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is opened by 88240@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 20:15:00 #3 store] 
+Configuration path: /Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/objectdb.conf
+
+[2025-06-21 20:17:51 #4 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is closed by 88240@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 20:17:51 #5 server] 
+Server on port 6137 has stopped by 88240@MacBook-Air-de-Maddi-5.local
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-21 20:19:10 #1 server] 
+Server on port 6137 has started by 88401@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 20:19:14 #2 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is opened by 88401@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 20:19:14 #3 store] 
+Configuration path: /Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/objectdb.conf
+
+[2025-06-21 20:19:18 #4 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is closed by 88401@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 20:19:20 #5 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is opened by 88401@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 20:19:20 #6 store] 
+Configuration path: /Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/objectdb.conf
+
+[2025-06-21 20:19:52 #7 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is closed by 88401@MacBook-Air-de-Maddi-5.local
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-21 20:24:56 #1 server] 
+Server on port 6137 has started by 89478@MacBook-Air-de-Maddi-5.local
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-21 20:25:10 #1 server] 
+Server on port 6137 has started by 89614@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 20:25:15 #2 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is opened by 89614@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 20:25:15 #3 store] 
+Configuration path: /Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/objectdb.conf
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-21 20:27:17 #1 server] 
+Server on port 6137 has started by 90078@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 20:27:23 #2 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' has been recovered (tr. 11-12)
+
+[2025-06-21 20:27:23 #3 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is opened by 90078@MacBook-Air-de-Maddi-5.local
+
+[2025-06-21 20:27:23 #4 store] 
+Configuration path: /Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/objectdb.conf
+
+[2025-06-22 01:00:26 #5 store] 
+Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is closed by 90078@MacBook-Air-de-Maddi-5.local
+
+[2025-06-22 01:00:39 #6 server] 
+Server on port 6137 has stopped by 90078@MacBook-Air-de-Maddi-5.local
+

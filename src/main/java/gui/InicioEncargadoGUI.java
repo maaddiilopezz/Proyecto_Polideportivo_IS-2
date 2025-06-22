@@ -25,9 +25,9 @@ public class InicioEncargadoGUI extends JFrame {
 		
 		setTitle(ResourceBundleUtil.getString("InicioEncargadoGUI.Titulo"));
 		
-		JButton botonAñadirActividad = new JButton(ResourceBundleUtil.getString("InicioEncargadoGUI.AñadirActividad"));
-		botonAñadirActividad.setBounds(127, 34, 187, 29);
-		contentPane.add(botonAñadirActividad);
+		JButton botonAnadirActividad = new JButton(ResourceBundleUtil.getString("InicioEncargadoGUI.AnadirActividad"));
+		botonAnadirActividad.setBounds(127, 34, 187, 29);
+		contentPane.add(botonAnadirActividad);
 		
 		JButton botonPlanificarSesiones = new JButton(ResourceBundleUtil.getString("InicioEncargadoGUI.PlanificarSesiones"));
 		botonPlanificarSesiones.setBounds(142, 109, 161, 29);
@@ -45,7 +45,6 @@ public class InicioEncargadoGUI extends JFrame {
 		    dispose();
 		});
 
-		// Acción al hacer clic en "Planificar sesiones"
 		botonPlanificarSesiones.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 System.out.println("[DEBUG] Botón Planificar Sesiones pulsado");
@@ -55,7 +54,7 @@ public class InicioEncargadoGUI extends JFrame {
             }
         });
 		
-		botonAñadirActividad.addActionListener(e -> {
+		botonAnadirActividad.addActionListener(e -> {
             AñadirActividadGUI ventana = new AñadirActividadGUI();
             ventana.setVisible(true);
         });

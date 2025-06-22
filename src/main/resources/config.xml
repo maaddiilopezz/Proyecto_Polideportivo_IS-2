@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
   <businessLogic local="false"> 
-	<businessLogicNode>0.0.0.0</businessLogicNode>
-	<businessLogicPort>1099</businessLogicPort>
+	<businessLogicNode>127.0.0.1</businessLogicNode>
+	<businessLogicPort>9999</businessLogicPort>
 	<businessLogicName>Rides</businessLogicName>
   </businessLogic>
-  <database local="true" initialize="false">
-	<databaseNode>0.0.0.0</databaseNode>
-	<dbFilename>src/main/resources/polideportivo.temp</dbFilename>
-	<databasePort>6136</databasePort>
+  <database local="false" initialize="false">
+	<databaseNode>127.0.0.1</databaseNode>
+	<dbFilename>polideportivo.temp</dbFilename>
+	<databasePort>6137</databasePort>
 	<user>admin</user>
 	<password>admin</password>
   </database>

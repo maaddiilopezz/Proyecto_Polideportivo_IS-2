@@ -38,7 +38,7 @@ public class BLFacadeImplementation  implements BLFacade {
 		
 		
 		    dbManager=new DataAccess();
-		    this.dataAccess = new dataAccess.DataAccess();
+		    this.dataAccess = dbManager;
 		//dbManager.close();
 
 		
@@ -193,6 +193,10 @@ public class BLFacadeImplementation  implements BLFacade {
 	@Override
 	public List<Factura> getFacturasPendientesDeSocio(Socio socio) {
         return dbManager.getFacturasPendientesDeSocio(socio);
+    }
+	@Override
+    public void cancelarReserva(Reserva reserva) throws Exception {
+        dbManager.cancelarReserva(reserva);
     }
 }
 

@@ -1,29 +1,38 @@
 package domain;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlID;
+import javax.xml.bind.annotation.XmlTransient;
 
 @Entity
-public class Sala {
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Sala implements Serializable {
 	@Id
+	@XmlID
 	private String nombreSala;
 	private int aforoMaximo;
 	private boolean libre;
 	@OneToMany
-    private ArrayList<Sesion> sesiones;
+	@XmlTransient
+	private ArrayList<Sesion> sesiones;
 
-	
 	public Sala(String nombreSala, int aforoMaximo, boolean libre) {
 		this.nombreSala = nombreSala;
 		this.aforoMaximo = aforoMaximo;
 		this.libre = libre;
-        this.sesiones = new ArrayList<>();
+		this.sesiones = new ArrayList<>();
 
 	}
+
 	public Sala() {
-		
+
 	}
 
 	public String getNombreSala() {
@@ -50,19 +59,21 @@ public class Sala {
 		this.libre = libre;
 	}
 
-    public ArrayList<Sesion> getSesiones() {
-        return sesiones;
-    }
+	public ArrayList<Sesion> getSesiones() {
+		return sesiones;
+	}
 
-    public void setSesiones(ArrayList<Sesion> sesiones) {
-        this.sesiones = sesiones;
-    }
+	public void setSesiones(ArrayList<Sesion> sesiones) {
+		this.sesiones = sesiones;
+	}
 
-    public void agregarSesion(Sesion sesion) {
-        this.sesiones.add(sesion);
-    }
-    @Override
-    public String toString() {
-        return "Sala [nombreSala=" + nombreSala + ", aforoMaximo=" + aforoMaximo + ", libre=" + libre + ", sesiones=" + sesiones + "]";
-    }
+	public void agregarSesion(Sesion sesion) {
+		this.sesiones.add(sesion);
+	}
+
+	@Override
+	public String toString() {
+		return "Sala [nombreSala=" + nombreSala + ", aforoMaximo=" + aforoMaximo + ", libre=" + libre + ", sesiones="
+				+ sesiones + "]";
+	}
 }

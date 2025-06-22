@@ -1,10 +1,17 @@
 package domain;
 
+import java.io.Serializable;
+
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlID;
+import javax.xml.bind.annotation.XmlSeeAlso;
 
 @MappedSuperclass
-public abstract class Usuario {
-
+@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlSeeAlso({ Socio.class, Encargado.class })
+public abstract class Usuario implements Serializable {
     @Id
     protected String dni;
 
@@ -12,7 +19,8 @@ public abstract class Usuario {
     protected String mail;
     protected String contraseña;
 
-    public Usuario() {}
+    public Usuario() {
+    }
 
     public Usuario(String dni, String nombre, String mail, String contraseña) {
         this.dni = dni;
@@ -21,6 +29,7 @@ public abstract class Usuario {
         this.contraseña = contraseña;
     }
 
+    @XmlID
     public String getDni() {
         return dni;
     }

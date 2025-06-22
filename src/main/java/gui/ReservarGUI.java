@@ -17,13 +17,13 @@ public class ReservarGUI extends JFrame {
         this.sesion = sesion;
         this.facade = gui.InicioGUI.getBusinessLogic();
         setTitle(ResourceBundleUtil.getString("ReservarGUI.Titulo"));
-        setSize(400, 230);
-        setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        setLayout(new BorderLayout());
+        setBounds(100, 100, 600, 400);
 
-        JPanel panel = new JPanel();
-        panel.setLayout(new GridBagLayout());
+        JPanel mainPanel = new JPanel(new BorderLayout());
+        JPanel panel = new JPanel(new GridBagLayout());
+        mainPanel.add(panel, BorderLayout.CENTER);
+
         panel.setBorder(BorderFactory.createEmptyBorder(15, 15, 15, 15));
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(5, 5, 5, 5);
@@ -100,7 +100,8 @@ public class ReservarGUI extends JFrame {
         gbc.gridwidth = 2;
         gbc.anchor = GridBagConstraints.CENTER;
         JButton botonReservar = new JButton(ResourceBundleUtil.getString("ReservarGUI.Titulo"));
-        botonReservar.setFont(new Font("Arial", Font.BOLD, 14));
+        botonReservar.setFont(new Font("Arial", Font.BOLD, 18)); // Aumentar tamaño de fuente
+        botonReservar.setPreferredSize(new Dimension(180, 40)); // Aumentar tamaño del botón
         panel.add(botonReservar, gbc);
 
         gbc.gridy++;
@@ -111,7 +112,6 @@ public class ReservarGUI extends JFrame {
 
         botonReservar.addActionListener(e -> {
             System.out.println("[DEBUG] ReservarGUI: Botón reservar pulsado");
-            // Eliminar comprobación local de reservas repetidas, dejar que la lógica de backend decida
             try {
                 if (sesion.getSala() == null) {
                     JOptionPane.showMessageDialog(this, "Error: la sala de esta sesión no está definida.", "Error", JOptionPane.ERROR_MESSAGE);
@@ -139,7 +139,7 @@ public class ReservarGUI extends JFrame {
         JPanel panelBotonAtras = new JPanel(new FlowLayout(FlowLayout.LEFT));
         panelBotonAtras.add(botonAtras);
 
-        add(panelBotonAtras, BorderLayout.SOUTH);
-        add(panel, BorderLayout.CENTER);
+        mainPanel.add(panelBotonAtras, BorderLayout.SOUTH);
+        setContentPane(mainPanel);
     }
 }

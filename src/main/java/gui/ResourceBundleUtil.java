@@ -5,11 +5,11 @@ import java.util.ResourceBundle;
 
 public class ResourceBundleUtil {
     private static Locale currentLocale = new Locale("es");
-    private static ResourceBundle bundle = ResourceBundle.getBundle("Etiquetas", currentLocale);
+    private static ResourceBundle bundle = ResourceBundle.getBundle("Etiquetas", currentLocale, new UTF8Control());
 
     public static void setLocale(Locale locale) {
         currentLocale = locale;
-        bundle = ResourceBundle.getBundle("Etiquetas", currentLocale);
+        bundle = ResourceBundle.getBundle("Etiquetas", currentLocale, new UTF8Control());
     }
 
     public static String getString(String key) {

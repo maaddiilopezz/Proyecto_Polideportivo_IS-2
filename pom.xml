@@ -8,32 +8,71 @@
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.19.1</version>
-				<configuration>
-					<testFailureIgnore>true</testFailureIgnore>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.jacoco</groupId>
-				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.8.8</version>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>3.6.0</version>
 				<executions>
 					<execution>
-						<id>prepare-agent</id>
+						<id>logica-fat-jar</id>
+						<phase>package</phase>
 						<goals>
-							<goal>prepare-agent</goal>
+							<goal>single</goal>
 						</goals>
+						<configuration>
+							<finalName>Logica</finalName>
+							<appendAssemblyId>false</appendAssemblyId>
+							<archive>
+								<manifest>
+									<mainClass>businessLogic.BusinessLogicServer</mainClass>
+								</manifest>
+							</archive>
+							<descriptorRefs>
+								<descriptorRef>jar-with-dependencies</descriptorRef>
+							</descriptorRefs>
+							<outputDirectory>${project.basedir}</outputDirectory>
+						</configuration>
 					</execution>
 					<execution>
-						<id>report</id>
+						<id>presentacion-fat-jar</id>
+						<phase>package</phase>
 						<goals>
-							<goal>report</goal>
+							<goal>single</goal>
 						</goals>
+						<configuration>
+							<finalName>Presentacion</finalName>
+							<appendAssemblyId>false</appendAssemblyId>
+							<archive>
+								<manifest>
+									<mainClass>gui.ApplicationLauncherWebService</mainClass>
+								</manifest>
+							</archive>
+							<descriptorRefs>
+								<descriptorRef>jar-with-dependencies</descriptorRef>
+							</descriptorRefs>
+							<outputDirectory>${project.basedir}</outputDirectory>
+						</configuration>
+					</execution>
+					<execution>
+						<id>datos-fat-jar</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+						<configuration>
+							<finalName>Datos</finalName>
+							<appendAssemblyId>false</appendAssemblyId>
+							<archive>
+								<manifest>
+									<mainClass>dataAccess.ObjectdbManagerServer</mainClass>
+								</manifest>
+							</archive>
+							<descriptorRefs>
+								<descriptorRef>jar-with-dependencies</descriptorRef>
+							</descriptorRefs>
+							<outputDirectory>${project.basedir}</outputDirectory>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
-			
 		</plugins>
 	</build>
 	<repositories>
@@ -100,7 +139,7 @@
 		<dependency>
 			<groupId>com.objectdb</groupId>
 			<artifactId>objectdb</artifactId>
-			<version>2.8.1</version>
+			<version>2.9.4</version>
 		</dependency>
 
 
@@ -143,6 +182,31 @@
 			<artifactId>mockito-inline</artifactId>
 			<version>3.4.0</version>
 			<scope>test</scope>
+		</dependency>
+		
+		<!-- API JAXB -->
+		<dependency>
+		<groupId>jakarta.xml.bind</groupId>
+		<artifactId>jakarta.xml.bind-api</artifactId>
+		<version>2.3.2</version>
+		</dependency>
+		<!-- Runtime -->
+		<dependency>
+		<groupId>org.glassfish.jaxb</groupId>
+		<artifactId>jaxb-runtime</artifactId>
+		<version>2.3.2</version>
+		</dependency>
+		<!-- API JAX-WS -->
+		<dependency>
+		<groupId>jakarta.xml.ws</groupId>
+		<artifactId>jakarta.xml.ws-api</artifactId>
+		<version>2.3.2</version>
+		</dependency>
+		<!-- Runtime -->
+		<dependency>
+		<groupId>com.sun.xml.ws</groupId>
+		<artifactId>jaxws-rt</artifactId>
+		<version>2.3.5</version>
 		</dependency>
 
 	</dependencies>

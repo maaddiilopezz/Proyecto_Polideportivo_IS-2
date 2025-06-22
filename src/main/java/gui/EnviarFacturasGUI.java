@@ -90,7 +90,6 @@ public class EnviarFacturasGUI extends JFrame {
             return;
         }
         try {
-            // Mostrar solo facturas pendientes (no enviadas, sin marcarlas)
             List<Factura> facturas = facade.getFacturasPendientesDeSocio(socio);
             if (facturas.isEmpty()) {
                 areaFacturas.setText("No hay facturas pendientes para este socio.");
@@ -114,17 +113,13 @@ public class EnviarFacturasGUI extends JFrame {
             return;
         }
         try {
-            // Mandar y marcar como enviadas las facturas pendientes
             List<Factura> facturas = facade.mandarFacturas(socio, null);
             if (facturas.isEmpty()) {
                 areaFacturas.setText("No hay facturas pendientes para enviar a este socio.");
             } else {
-                StringBuilder sb = new StringBuilder();
-                for (Factura f : facturas) {
-                    sb.append(f.toString()).append("\n");
-                }
-                areaFacturas.setText(sb.toString());
                 JOptionPane.showMessageDialog(this, "Facturas enviadas correctamente.", "Envío realizado", JOptionPane.INFORMATION_MESSAGE);
+                // Refrescar la lista de facturas pendientes tras el envío
+                mostrarFacturasPendientesSocioSeleccionado();
             }
         } catch (Exception ex) {
             areaFacturas.setText("Error: " + ex.getMessage());

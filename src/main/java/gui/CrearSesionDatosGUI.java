@@ -33,47 +33,40 @@ public class CrearSesionDatosGUI extends JFrame {
         this.setSize(new Dimension(700, 500));
         this.setTitle(ResourceBundleUtil.getString("PlanificarSesionesGUI.Titulo"));
 
-        // Label hora inicio
         JLabel jLabelHoraInicio = new JLabel(ResourceBundleUtil.getString("PlanificarSesionesGUI.HoraInicio"));
-        jLabelHoraInicio.setBounds(50, 260, 120, 25); // Más abajo aún
+        jLabelHoraInicio.setBounds(50, 260, 120, 25); 
         this.getContentPane().add(jLabelHoraInicio);
 
-        // Spinner hora inicio con SpinnerListModel
         String[] horasInicio = new String[14]; // 8:00 a 21:00
         for (int i = 0; i < 14; i++) {
             int hora = 8 + i;
             horasInicio[i] = String.format("%02d:00", hora);
         }
         spinnerHoraInicio = new JSpinner(new javax.swing.SpinnerListModel(horasInicio));
-        spinnerHoraInicio.setBounds(180, 260, 100, 25); // Más abajo aún
+        spinnerHoraInicio.setBounds(180, 260, 100, 25);
         this.getContentPane().add(spinnerHoraInicio);
 
-        // Label hora fin
         JLabel jLabelHoraFin = new JLabel(ResourceBundleUtil.getString("PlanificarSesionesGUI.HoraFin"));
-        jLabelHoraFin.setBounds(50, 300, 120, 25); // Más abajo aún
+        jLabelHoraFin.setBounds(50, 300, 120, 25); 
         this.getContentPane().add(jLabelHoraFin);
 
-        // Spinner hora fin con SpinnerListModel
-        String[] horasFin = new String[14]; // 9:00 a 22:00
+        String[] horasFin = new String[14]; 
         for (int i = 0; i < 14; i++) {
             int hora = 9 + i;
             horasFin[i] = String.format("%02d:00", hora);
         }
         spinnerHoraFin = new JSpinner(new javax.swing.SpinnerListModel(horasFin));
-        spinnerHoraFin.setBounds(180, 300, 100, 25); // Más abajo aún
+        spinnerHoraFin.setBounds(180, 300, 100, 25); 
         this.getContentPane().add(spinnerHoraFin);
 
-        // Calendario
         jCalendar1.setBounds(new Rectangle(300, 50, 225, 150));
         this.getContentPane().add(jCalendar1);
 
-        // Botón Aceptar
         JButton botonAceptar = new JButton(ResourceBundleUtil.getString("PlanificarSesionesGUI.Aceptar"));
         botonAceptar.setBounds(249, 354, 117, 29);
         getContentPane().add(botonAceptar);
 
-        // Botón Atrás
-        JButton botonAtras = new JButton("\u2190"); // ←
+        JButton botonAtras = new JButton("\u2190");
         botonAtras.setBounds(10, 10, 50, 25);
         this.getContentPane().add(botonAtras);
         botonAtras.addActionListener(e -> {
@@ -81,10 +74,8 @@ public class CrearSesionDatosGUI extends JFrame {
             dispose();
         });
 
-        // Acción al hacer clic en el botón "Aceptar"
         botonAceptar.addActionListener(e -> {
             try {
-                // Solo recoge fecha y horas
                 if (spinnerHoraInicio.getValue() == null || spinnerHoraFin.getValue() == null || jCalendar1.getDate() == null) {
                     JOptionPane.showMessageDialog(this, "Por favor, selecciona fecha y horas.", "Error", JOptionPane.ERROR_MESSAGE);
                     return;
@@ -99,9 +90,10 @@ public class CrearSesionDatosGUI extends JFrame {
                 }
                 java.util.Date fechaSeleccionada = jCalendar1.getDate();
                 java.sql.Date fechaSql = new java.sql.Date(fechaSeleccionada.getTime());
-                // Abre PlanificarSesionesGUI pasando fecha y horas
-                PlanificarSesionesGUI planificarSesionesGUI = new PlanificarSesionesGUI(fechaSql, java.sql.Time.valueOf(horaInicio), java.sql.Time.valueOf(horaFin));
-                planificarSesionesGUI.setVisible(true);
+                java.time.LocalDate fechaLocal = fechaSeleccionada.toInstant().atZone(java.time.ZoneId.systemDefault()).toLocalDate();
+                // Abrir ConfirmarSesionCreadaGUI pasando fecha, horaInicio y horaFin
+                ConfirmarSesionCreadaGUI confirmarSesionCreadaGUI = new ConfirmarSesionCreadaGUI(fechaLocal, horaInicio, horaFin);
+                confirmarSesionCreadaGUI.setVisible(true);
                 this.dispose();
             } catch (Exception ex) {
                 JOptionPane.showMessageDialog(this, "Error inesperado: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
@@ -110,24 +102,20 @@ public class CrearSesionDatosGUI extends JFrame {
         });
     }
 
-    // Método para convertir java.sql.Date a java.time.LocalDate
     public LocalDate convertirAFechaLocalDate(Date date) {
         return date.toLocalDate();
     }
    
 
-    // Método para convertir java.sql.Date a java.time.LocalTime
     public LocalTime convertirAHoraLocalTime(Time horaSqlInicio) {
         return horaSqlInicio.toLocalTime();
     }
 
-    // Cambia el constructor para recibir solo fecha y horas
     public CrearSesionDatosGUI(LocalDate fecha, LocalTime horaInicio, LocalTime horaFin) {
         this.fecha = fecha;
         this.horaInicio = horaInicio;
         this.horaFin = horaFin;
         initGUI();
-        // Rellenar los campos de fecha y hora
         if (jCalendar1 != null && fecha != null) {
             java.util.Date utilDate = java.sql.Date.valueOf(fecha);
             jCalendar1.setDate(utilDate);
@@ -142,7 +130,6 @@ public class CrearSesionDatosGUI extends JFrame {
         this.repaint();
     }
 
-    // Constructor por defecto para permitir abrir la ventana sin argumentos
     public CrearSesionDatosGUI() {
         this(null, null, null);
     }

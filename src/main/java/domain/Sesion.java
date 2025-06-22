@@ -1,57 +1,89 @@
 package domain;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlID;
+import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @Entity
-public class Sesion {
-
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Sesion implements Serializable {
     @Id
-    @GeneratedValue
-    private Long id;
-
+    @XmlID
+    private String id;
+    @XmlJavaTypeAdapter(LocalDateAdapter.class)
     private LocalDate fechaImparticion;
+    @XmlJavaTypeAdapter(LocalTimeAdapter.class)
     private LocalTime horaInicio;
+    @XmlJavaTypeAdapter(LocalTimeAdapter.class)
     private LocalTime horaFinal;
     private int plazasOcupadas;
-
-    @ManyToOne
-    @JoinColumns({
-        @JoinColumn(name = "actividad_nombre", referencedColumnName = "id.nombreActividad"),
-        @JoinColumn(name = "actividad_nivel", referencedColumnName = "id.gradoExigencia")
-    })
+    @ManyToOne(cascade = CascadeType.ALL)
     private Actividad actividad;
 
-    @ManyToOne
-    private Sala sala;
-
-    // Si necesitas persistir reservas, esta línea requiere definir la relación en Reserva
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Sala sala; // Si necesitas persistir reservas, esta línea requiere definir la relación en
+    // Reserva
     @OneToMany(mappedBy = "sesion", cascade = CascadeType.ALL, orphanRemoval = true)
+    @XmlTransient
     private List<Reserva> reservas;
 
+    @Transient
+    private List<Socio> listaEspera = new ArrayList<>();
+
     public Sesion() {
-    	reservas = new ArrayList<Reserva> ();
+        this.id = UUID.randomUUID().toString();
+        reservas = new ArrayList<>();
+        listaEspera = new ArrayList<>();
+    }
+    public List<Socio> getListaEspera() {
+        return listaEspera;
+    }
+
+    public void setListaEspera(List<Socio> listaEspera) {
+        this.listaEspera = listaEspera;
+    }
+
+    public void addSocioListaEspera(Socio socio) {
+        if (!listaEspera.contains(socio)) {
+            listaEspera.add(socio);
+        }
+    }
+
+    public void removeSocioListaEspera(Socio socio) {
+        listaEspera.remove(socio);
     }
 
     public Sesion(LocalDate fechaImparticion, LocalTime horaInicio, LocalTime horaFinal, int plazasOcupadas) {
-    	this();
-    	this.fechaImparticion = fechaImparticion;
+        this();
+        this.fechaImparticion = fechaImparticion;
         this.horaInicio = horaInicio;
         this.horaFinal = horaFinal;
         this.plazasOcupadas = plazasOcupadas;
     }
 
-    public Sesion(Actividad actividad, Sala sala, LocalDate fechaImparticion, LocalTime horaInicio, LocalTime horaFinal) {
+    public Sesion(Actividad actividad, Sala sala, LocalDate fechaImparticion, LocalTime horaInicio,
+            LocalTime horaFinal) {
         this(fechaImparticion, horaInicio, horaFinal, 0);
         this.actividad = actividad;
         this.sala = sala;
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public LocalDate getFechaImparticion() {
@@ -121,6 +153,7 @@ public class Sesion {
     @Override
     public String toString() {
         return "Sesion [id=" + id + ", fechaImparticion=" + fechaImparticion + ", horaInicio=" + horaInicio +
-                ", horaFinal=" + horaFinal + ", plazasOcupadas=" + plazasOcupadas + ", actividad=" + (actividad != null ? actividad.getNombreActividad() : "null") + "]";
+                ", horaFinal=" + horaFinal + ", plazasOcupadas=" + plazasOcupadas + ", actividad="
+                + (actividad != null ? actividad.getNombreActividad() : "null") + "]";
     }
 }

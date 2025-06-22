@@ -49,7 +49,7 @@ public class RegistrarGUI extends JFrame {
         nombre.setBounds(51, 28, 61, 16);
         contentPane.add(nombre);
 
-        JLabel contrasena = new JLabel(ResourceBundleUtil.getString("RegistrarGUI.Contraseña"));
+        JLabel contrasena = new JLabel(ResourceBundleUtil.getString("RegistrarGUI.Contrasena"));
         contrasena.setBounds(51, 129, 82, 16);
         contentPane.add(contrasena);
 
@@ -129,7 +129,6 @@ public class RegistrarGUI extends JFrame {
 
             try {
                 String email = textCorreoElectronico.getText();
-                // Validación básica de email
                 if (!email.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$")) {
                     mensajeError.setText("Correo electrónico inválido.");
                     mensajeError.setVisible(true);
@@ -137,14 +136,11 @@ public class RegistrarGUI extends JFrame {
                 }
 
                 int numTarjeta = Integer.parseInt(textNumeroTarjeta.getText());
-                // Validar que la hora de fin sea posterior a la de inicio en la planificación de sesiones
-                // (esto se haría en la GUI de planificación, pero aquí te muestro cómo sería la validación)
-                // Si tienes campos de hora de inicio y fin, deberías hacer algo como:
-                // if (horaFin.isBefore(horaInicio) || horaFin.equals(horaInicio)) {
-                //     mensajeError.setText("La hora de fin debe ser posterior a la de inicio.");
-                //     mensajeError.setVisible(true);
-                //     return;
-                // }
+                if (numTarjeta <= 0) {
+                    mensajeError.setText("Número de tarjeta debe ser positivo.");
+                    mensajeError.setVisible(true);
+                    return;
+                }
 
                 Socio nuevo = facade.registrarSocio(
                         textDNI.getText(),
@@ -160,7 +156,7 @@ public class RegistrarGUI extends JFrame {
                 } else {
                     mensajeAprobado.setText("¡Registro exitoso!");
                     mensajeAprobado.setVisible(true);
-                    // Limpiar campos tras registro exitoso
+                    
                     textDNI.setText("");
                     textNombre.setText("");
                     textCorreoElectronico.setText("");
@@ -184,7 +180,7 @@ public class RegistrarGUI extends JFrame {
             }
         });
         
-        JButton botonAtras = new JButton("\u2190"); // ←
+        JButton botonAtras = new JButton("\u2190"); 
         botonAtras.setBounds(10, 10, 50, 25);
         contentPane.add(botonAtras);
         botonAtras.addActionListener(e -> {

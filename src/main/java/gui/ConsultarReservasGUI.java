@@ -27,10 +27,9 @@ public class ConsultarReservasGUI extends JFrame {
     private BLFacade businessLogic;
     private Socio socio;
 
-    // Recibe el socio para mostrar sus reservas
     public ConsultarReservasGUI(Socio socio) {
         this.socio = socio;
-        businessLogic = new BLFacadeImplementation();
+        businessLogic = InicioGUI.getBusinessLogic();
 
         setTitle(ResourceBundleUtil.getString("consultarReservas.titulo"));
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -61,7 +60,24 @@ public class ConsultarReservasGUI extends JFrame {
         panelBotonAtras.add(botonAtras);
         contentPane.add(panelBotonAtras, BorderLayout.SOUTH);
 
-        // Cargar reservas del socio SIEMPRE desde la base de datos
+        JButton botonCancelar = new JButton("Cancelar reserva");
+        botonCancelar.setFont(new Font("Arial", Font.PLAIN, 13));
+        botonCancelar.addActionListener(e -> {
+            Reserva seleccionada = listaReservas.getSelectedValue();
+            if (seleccionada != null && seleccionada.getIdReserva() != null) {
+                try {
+                    businessLogic.cancelarReserva(seleccionada);
+                    reservasModel.removeElement(seleccionada);
+                    javax.swing.JOptionPane.showMessageDialog(this, "Reserva cancelada correctamente.");
+                } catch (Exception ex) {
+                    javax.swing.JOptionPane.showMessageDialog(this, "Error al cancelar la reserva: " + ex.getMessage());
+                }
+            }
+        });
+        JPanel panelBotones = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+        panelBotones.add(botonCancelar);
+        contentPane.add(panelBotones, BorderLayout.EAST);
+
         List<Reserva> reservas = businessLogic.getReservasDeSocio(socio);
         if (reservas != null && !reservas.isEmpty()) {
             for (Reserva r : reservas) {
@@ -69,7 +85,9 @@ public class ConsultarReservasGUI extends JFrame {
             }
         } else {
             reservasModel.addElement(new Reserva(null, null) {
-                public String toString() { return ResourceBundleUtil.getString("consultarReservas.noReservas"); }
+                public String toString() {
+                    return ResourceBundleUtil.getString("consultarReservas.noReservas");
+                }
             });
         }
     }

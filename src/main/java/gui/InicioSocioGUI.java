@@ -52,24 +52,23 @@ public class InicioSocioGUI extends JFrame {
 		        System.out.println("Botón Consultar Sesiones pulsado");
 		        ConsultarSesionesGUI nuevaVentana = new ConsultarSesionesGUI(socio);
 		        nuevaVentana.setVisible(true);
-		        dispose();  // Cierra la ventana actual (opcional)
+		        dispose();  // Cierra la ventana actual
 		    } catch (Exception ex) {
 		        ex.printStackTrace();
 		        JOptionPane.showMessageDialog(this, "Error al abrir ConsultarSesionesGUI: " + ex.getMessage());
 		    }
 		});
 		
-		// NUEVO: Acción para el botón "Consultar reservas"
 		botonConsultarReservas.addActionListener(e -> {
 		    ConsultarReservasGUI nuevaVentana = new ConsultarReservasGUI(socio);
 		    nuevaVentana.setVisible(true);
-		    dispose();  // Cierra la ventana actual (opcional)
+		    dispose();  
 		});
 		
 		botonConsultarFacturas.addActionListener(e -> {
 		    ConsultarFacturasGUI nuevaVentana = new ConsultarFacturasGUI(socio);
 		    nuevaVentana.setVisible(true);
-		    dispose();  // Cierra la ventana actual (opcional)
+		    dispose();  
 		});
 		
 		botonAtras.addActionListener(e -> {

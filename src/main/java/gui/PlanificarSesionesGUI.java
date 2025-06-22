@@ -36,7 +36,6 @@ public class PlanificarSesionesGUI extends JFrame {
     private Time horaFinSeleccionada; 
     BLFacade facade = InicioGUI.getBusinessLogic(); 
 
-    // Cambia el constructor para NO pasar actividad ni sala, solo fecha y horas
     public PlanificarSesionesGUI(Date fecha, Time horaInicio, Time horaFin) {
         this.fechaSeleccionada = fecha;
         this.horaInicioSeleccionada = horaInicio;
@@ -44,7 +43,6 @@ public class PlanificarSesionesGUI extends JFrame {
         initialize();
     }
 
-    // Constructor vacío para permitir abrir la ventana sin argumentos
     public PlanificarSesionesGUI() {
         this(new java.sql.Date(System.currentTimeMillis()), java.sql.Time.valueOf("09:00:00"), java.sql.Time.valueOf("10:00:00"));
     }
@@ -58,15 +56,14 @@ public class PlanificarSesionesGUI extends JFrame {
         setContentPane(contentPane);
         contentPane.setLayout(null);
 
-        // Mostrar la fecha y horas recibidas
         JLabel lblResumen = new JLabel("Fecha seleccionada: " + (fechaSeleccionada != null ? fechaSeleccionada.toString() : "-") +
             " | Hora inicio: " + (horaInicioSeleccionada != null ? horaInicioSeleccionada.toString() : "-") +
             " | Hora fin: " + (horaFinSeleccionada != null ? horaFinSeleccionada.toString() : "-"));
-        lblResumen.setBounds(20, 60, 400, 20); // Más abajo
+        lblResumen.setBounds(20, 60, 400, 20); 
         contentPane.add(lblResumen);
 
         JLabel lblInfo = new JLabel(ResourceBundleUtil.getString("PlanificarSesionesGUI.Info"));
-        lblInfo.setBounds(60, 90, 350, 16); // Más abajo
+        lblInfo.setBounds(60, 90, 350, 16); 
         contentPane.add(lblInfo);
 
         JLabel actividades = new JLabel(ResourceBundleUtil.getString("PlanificarSesionesGUI.Actividad") + "s:");
@@ -90,7 +87,7 @@ public class PlanificarSesionesGUI extends JFrame {
         botonAceptar.setEnabled(false);
         contentPane.add(botonAceptar);
         
-        JButton botonAtras = new JButton("\u2190"); // ←
+        JButton botonAtras = new JButton("\u2190");
         botonAtras.setBounds(10, 10, 50, 25);
         contentPane.add(botonAtras);
         botonAtras.addActionListener(e -> {
@@ -99,18 +96,15 @@ public class PlanificarSesionesGUI extends JFrame {
         });
 
 
-        // Cargar datos
         cargarActividades();
         cargarSalasLibres();
 
-        // Habilitar botón solo si ambas opciones están seleccionadas
         comboBoxActividades.addActionListener(e -> {
             habilitarBotonAceptar();
             cargarSalasLibres();
         });
         comboBoxSalas.addActionListener(e -> habilitarBotonAceptar());
 
-        // Acción del botón aceptar
         botonAceptar.addActionListener(e -> {
             try {
                 String nombreActividad = (String) comboBoxActividades.getSelectedItem();
@@ -137,7 +131,6 @@ public class PlanificarSesionesGUI extends JFrame {
                     JOptionPane.showMessageDialog(this, "Actividad o sala no válida.", "Error", JOptionPane.ERROR_MESSAGE);
                     return;
                 }
-                // Crear la sesión con los datos recogidos de ambas pantallas
                 facade.crearSesion(
                     actividadSeleccionada,
                     salaSeleccionada,
@@ -154,7 +147,6 @@ public class PlanificarSesionesGUI extends JFrame {
         });
     }
 
-    // Método para cargar las actividades en el JComboBox
     private void cargarActividades() {
     	comboBoxActividades.removeAllItems();
         List<Actividad> actividades = facade.getActividades();
@@ -162,23 +154,19 @@ public class PlanificarSesionesGUI extends JFrame {
         	comboBoxActividades.addItem(actividad.getNombreActividad());
         }
     }
-
-    // Método para cargar las salas libres en el JComboBox
+    
     private void cargarSalasLibres() {
         comboBoxSalas.removeAllItems();
 
-        // Obtener los valores de fecha y hora seleccionados
         LocalDate fecha = convertirAFechaLocalDate(this.fechaSeleccionada);
         LocalTime horaInicio = convertirAHoraLocalTime(this.horaInicioSeleccionada);
         LocalTime horaFin = convertirAHoraLocalTime(this.horaFinSeleccionada);
 
         List<Sala> salasLibres = facade.getTodasLasSalas();
         for (Sala sala : salasLibres) {
-            // Comprobar si la sala está disponible en la fecha y franja horaria seleccionada
             boolean disponible = true;
             List<domain.Sesion> sesionesSala = facade.getSesionesDeSala(sala, fecha);
             for (domain.Sesion sesion : sesionesSala) {
-                // Si hay solape de horas, la sala no está disponible
                 LocalTime sesionInicio = sesion.getHoraInicio();
                 LocalTime sesionFin = sesion.getHoraFinal();
                 if (!(horaFin.isBefore(sesionInicio) || horaInicio.isAfter(sesionFin) || horaFin.equals(sesionInicio) || horaInicio.equals(sesionFin))) {
@@ -192,7 +180,6 @@ public class PlanificarSesionesGUI extends JFrame {
         }
     }
 
-    // Método para habilitar el botón de aceptar si ambas opciones están seleccionadas
     private void habilitarBotonAceptar() {
         botonAceptar.setEnabled(
             comboBoxActividades.getSelectedItem() != null && 
@@ -200,12 +187,10 @@ public class PlanificarSesionesGUI extends JFrame {
         );
     }
 
-    // Método para convertir java.sql.Date a java.time.LocalDate
     public LocalDate convertirAFechaLocalDate(java.sql.Date date) {
         return date.toLocalDate();
     }
 
-    // Método para convertir java.sql.Date a java.time.LocalTime
     public LocalTime convertirAHoraLocalTime(Time horaInicioSeleccionada2) {
         return horaInicioSeleccionada2.toLocalTime();
     }
