@@ -70,7 +70,7 @@ public class IniciarSesionGUI extends JFrame {
         botonAceptar.setBounds(157, 207, 117, 29);
         contentPane.add(botonAceptar);
         
-        JButton botonAtras = new JButton("\u2190"); // ←
+        JButton botonAtras = new JButton("\u2190");
         botonAtras.setBounds(10, 10, 50, 25);
         contentPane.add(botonAtras);
         

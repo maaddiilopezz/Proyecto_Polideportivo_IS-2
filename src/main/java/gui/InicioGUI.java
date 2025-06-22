@@ -59,7 +59,7 @@ public class InicioGUI extends JFrame {
 		contentPane.add(continuarComoInvitadoBoton);
 
 		botonIngles = new JRadioButton("English");
-		botonIngles.setBounds(43, 223, 100, 23); // Ampliado el ancho de 70 a 100
+		botonIngles.setBounds(43, 223, 100, 23);
 		contentPane.add(botonIngles);
 
 		botonCastellano = new JRadioButton("Castellano");

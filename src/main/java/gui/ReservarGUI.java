@@ -100,8 +100,8 @@ public class ReservarGUI extends JFrame {
         gbc.gridwidth = 2;
         gbc.anchor = GridBagConstraints.CENTER;
         JButton botonReservar = new JButton(ResourceBundleUtil.getString("ReservarGUI.Titulo"));
-        botonReservar.setFont(new Font("Arial", Font.BOLD, 18)); // Aumentar tamaño de fuente
-        botonReservar.setPreferredSize(new Dimension(180, 40)); // Aumentar tamaño del botón
+        botonReservar.setFont(new Font("Arial", Font.BOLD, 18));
+        botonReservar.setPreferredSize(new Dimension(180, 40));
         panel.add(botonReservar, gbc);
 
         gbc.gridy++;
@@ -131,7 +131,7 @@ public class ReservarGUI extends JFrame {
             }
         });
 
-        JButton botonAtras = new JButton("\u2190"); // ←
+        JButton botonAtras = new JButton("\u2190");
         botonAtras.setFont(new Font("Arial", Font.PLAIN, 12));
         botonAtras.addActionListener(e -> {
             this.dispose();

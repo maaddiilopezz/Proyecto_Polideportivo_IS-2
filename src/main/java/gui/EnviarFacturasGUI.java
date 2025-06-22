@@ -7,6 +7,8 @@ import domain.Factura;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.util.List;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 public class EnviarFacturasGUI extends JFrame {
     private BLFacade facade = InicioGUI.getBusinessLogic();
@@ -60,7 +62,7 @@ public class EnviarFacturasGUI extends JFrame {
 
         botonCargar.addActionListener(e -> cargarSocios());
 
-        JButton botonAtras = new JButton("\u2190"); // ←
+        JButton botonAtras = new JButton("\u2190");
         botonAtras.setBounds(10, 10, 50, 25);
         contentPane.add(botonAtras);
         botonAtras.addActionListener(e -> {
@@ -74,9 +76,11 @@ public class EnviarFacturasGUI extends JFrame {
     private void cargarSocios() {
         comboSocios.removeAllItems();
         List<Socio> socios = facade.getSocios();
-        for (Socio s : socios) {
-            comboSocios.addItem(s);
+        Set<Socio> sociosUnicos = new LinkedHashSet<>(socios);
+        for (Socio socio : sociosUnicos) {
+            comboSocios.addItem(socio);
         }
+
         if (comboSocios.getItemCount() > 0) {
             comboSocios.setSelectedIndex(0);
         }
@@ -117,8 +121,9 @@ public class EnviarFacturasGUI extends JFrame {
             if (facturas.isEmpty()) {
                 areaFacturas.setText("No hay facturas pendientes para enviar a este socio.");
             } else {
-                JOptionPane.showMessageDialog(this, "Facturas enviadas correctamente.", "Envío realizado", JOptionPane.INFORMATION_MESSAGE);
-                // Refrescar la lista de facturas pendientes tras el envío
+                JOptionPane.showMessageDialog(this, "Facturas enviadas correctamente.", "Envío realizado",
+                        JOptionPane.INFORMATION_MESSAGE);
+                mostrarFacturasPendientesSocioSeleccionado();
                 mostrarFacturasPendientesSocioSeleccionado();
             }
         } catch (Exception ex) {

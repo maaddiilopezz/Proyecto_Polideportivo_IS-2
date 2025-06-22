@@ -1,6 +1,6 @@
 package businessLogic;
-import java.time.LocalDate;
 
+import java.time.LocalDate;
 
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -25,97 +25,74 @@ import configuration.ConfigXML;
 import dataAccess.DataAccess;
 import exceptions.SocioAlreadyExistException;
 
-/**
- * It implements the business logic as a web service.
- */
 @WebService(endpointInterface = "businessLogic.BLFacade")
-public class BLFacadeImplementation  implements BLFacade {
-	DataAccess dbManager;
-	private dataAccess.DataAccess dataAccess;
+public class BLFacadeImplementation implements BLFacade {
+    DataAccess dbManager;
+    private dataAccess.DataAccess dataAccess;
 
-	public BLFacadeImplementation()  {		
-		System.out.println("Creating BLFacadeImplementation instance");
-		
-		
-		    dbManager=new DataAccess();
-		    this.dataAccess = dbManager;
-		//dbManager.close();
+    public BLFacadeImplementation() {
+        System.out.println("Creating BLFacadeImplementation instance");
 
-		
-	}
-	
-    public BLFacadeImplementation(DataAccess da)  {
-		
-		System.out.println("Creating BLFacadeImplementation instance with DataAccess parameter");
-		ConfigXML c=ConfigXML.getInstance();
-		
-		dbManager=da;		
-	}
+        dbManager = new DataAccess();
+        this.dataAccess = dbManager;
+    }
+
+    public BLFacadeImplementation(DataAccess da) {
+
+        System.out.println("Creating BLFacadeImplementation instance with DataAccess parameter");
+        ConfigXML c = ConfigXML.getInstance();
+
+        dbManager = da;
+    }
 
     @Override
-    public Socio registrarSocio(String dni, String nombre, String mail, String contraseña, int numeroTarjeta) throws SocioAlreadyExistException {
+    public Socio registrarSocio(String dni, String nombre, String mail, String contraseña, int numeroTarjeta)
+            throws SocioAlreadyExistException {
         return dbManager.registrarSocio(dni, nombre, mail, contraseña, numeroTarjeta);
     }
-    
+
     @Override
     public Usuario iniciarSesion(String correo, String contraseña) {
         return dbManager.iniciarSesion(correo, contraseña);
     }
-    
-    // Método para obtener las actividades
+
     @Override
     public List<Actividad> getActividades() {
         return dbManager.getActividades();
     }
+
     private boolean mismaFecha(LocalDate fecha1, LocalDate fecha2) {
-        // Comparar si las fechas son iguales
         return fecha1.isEqual(fecha2);
     }
 
     private boolean haySolape(LocalTime inicio1, LocalTime fin1, LocalTime inicio2, LocalTime fin2) {
-        // Verificar si hay solapamiento entre dos intervalos de tiempo
         return !inicio1.isAfter(fin2) && !inicio2.isAfter(fin1);
     }
-    // Método para obtener las salas libres
-  
-	public List<Sala> getTodasLasSalas(){
-		return dbManager.getTodasLasSalas();
-	}
-	
+
+    public List<Sala> getTodasLasSalas() {
+        return dbManager.getTodasLasSalas();
+    }
+
     @Override
     public List<Sesion> getSesionesPorFiltros(String actividad, Integer gradoExigencia) {
-        List<Sesion> sesionesFiltradas = new ArrayList<>();
-        List<Actividad> actividades = dbManager.getActividades();
-        LocalDate hoy = LocalDate.now();
-        LocalDate lunes = hoy.minusDays(hoy.getDayOfWeek().getValue() - 1);
-        LocalDate domingo = lunes.plusDays(6);
-        for (Actividad a : actividades) {
-            boolean cumpleActividad = (actividad == null || actividad.isEmpty()) || a.getNombreActividad().equalsIgnoreCase(actividad);
-            boolean cumpleExigencia = (gradoExigencia == null) || a.getGradoExigencia() == gradoExigencia;
-            if (cumpleActividad && cumpleExigencia) {
-                for (Sesion sesion : a.getSesiones()) {
-                    LocalDate fecha = sesion.getFechaImparticion();
-                    if (fecha != null && !fecha.isBefore(lunes) && !fecha.isAfter(domingo)) {
-                        sesionesFiltradas.add(sesion);
-                    }
-                }
-            }
-        }
-        return sesionesFiltradas;
+        return dbManager.getSesionesPorFiltros(actividad, gradoExigencia);
     }
 
     @Override
     public String getTipoUsuario(String correo) {
         return dbManager.getTipoUsuario(correo);
     }
+
     @Override
-    public void crearSesion(Actividad actividad, Sala sala, LocalDate fecha, LocalTime horaInicio, LocalTime horaFin) {
-        dbManager.crearSesion(actividad, sala, fecha, horaInicio, horaFin);
+    public void crearSesion(Actividad actividad, Sala sala, String fecha, String horaInicio, String horaFin) {
+        LocalDate fechaLocal = LocalDate.parse(fecha);
+        LocalTime horaInicioLocal = LocalTime.parse(horaInicio);
+        LocalTime horaFinLocal = LocalTime.parse(horaFin);
+        dbManager.crearSesion(actividad, sala, fechaLocal, horaInicioLocal, horaFinLocal);
     }
-    
+
     @Override
     public List<Sesion> getSesionesDeActividad(Actividad actividad) {
-        // Delegamos la llamada a DataAccess
         return dbManager.getSesionesDeActividad(actividad);
     }
 
@@ -123,55 +100,54 @@ public class BLFacadeImplementation  implements BLFacade {
     public List<Reserva> getReservasDeSocio(Socio socio) {
         return dbManager.getReservasDeSocio(socio);
     }
-    
+
     @Override
     public void reservarSesion(Socio socio, Sesion sesion) throws Exception {
         System.out.println("[DEBUG] BLFacadeImplementation.reservarSesion called");
-        // Usar SIEMPRE la misma instancia para todas las operaciones
         dbManager.reservarSesion(socio, sesion);
     }
-	
-	@Override
-	public Sesion getSesion(Reserva reserva) {
-		return reserva.getSesion();
-	}
-	@Override
-	public int getPlazasMaximas(Actividad actividad) {
-		return actividad.getPlazasMaximas();
-	}
-	
-	public void close() {
-		DataAccess dB4oManager=new DataAccess();
 
-		dB4oManager.close();
+    @Override
+    public Sesion getSesion(Reserva reserva) {
+        return reserva.getSesion();
+    }
 
-	}
+    @Override
+    public int getPlazasMaximas(Actividad actividad) {
+        return actividad.getPlazasMaximas();
+    }
 
-	/**
-	 * {@inheritDoc}
-	 */
-    @WebMethod	
-	 public void initializeBD(){
-    	dbManager.open();
-		dbManager.initializeDB();
-		dbManager.close();
-	}
+    public void close() {
+        DataAccess dB4oManager = new DataAccess();
 
-	// Permite pagar una factura desde la capa de negocio
+        dB4oManager.close();
+
+    }
+
+    @WebMethod
+    public void initializeBD() {
+        dbManager.open();
+        dbManager.initializeDB();
+        dbManager.close();
+    }
+
     @Override
     public void pagarFactura(domain.Factura factura) throws Exception {
         dbManager.pagarFactura(factura);
     }
 
-	@Override
-	public List<Factura> getFacturasDeSocio(Socio socio) {
-		return dbManager.getFacturasDeSocio(socio);
-	}
-	
-	public Actividad crearActividad(String nombre, int nivelExigencia) throws exceptions.ActividadAlreadyExistException {
+    @Override
+    public List<Factura> getFacturasDeSocio(Socio socio) {
+        return dbManager.getFacturasDeSocio(socio);
+    }
+
+    public Actividad crearActividad(String nombre, int nivelExigencia)
+            throws exceptions.ActividadAlreadyExistException {
         return dataAccess.crearActividad(nombre, nivelExigencia);
     }
-	public Actividad crearActividad(String nombre, int nivelExigencia, double precio) throws exceptions.ActividadAlreadyExistException {
+
+    public Actividad crearActividad(String nombre, int nivelExigencia, double precio)
+            throws exceptions.ActividadAlreadyExistException {
         return dbManager.crearActividad(nombre, nivelExigencia, precio);
     }
 
@@ -181,22 +157,23 @@ public class BLFacadeImplementation  implements BLFacade {
     }
 
     @Override
-    public List<Factura> mandarFacturas(Socio socio, java.time.LocalDate fechaIgnorada) {
-        // El parámetro fecha ya no se usa, solo se envían todas las facturas pendientes
+    public List<Factura> mandarFacturas(Socio socio, String fechaIgnorada) {
         return dbManager.mandarFacturas(socio);
     }
 
-	@Override
-	public List<Sesion> getSesionesDeSala(Sala sala, LocalDate fecha) {
-		return dbManager.getSesionesDeSala(sala, fecha);
-	}
-	@Override
-	public List<Factura> getFacturasPendientesDeSocio(Socio socio) {
+    @Override
+    public List<Sesion> getSesionesDeSala(Sala sala, String fecha) {
+        LocalDate fechaLocal = LocalDate.parse(fecha);
+        return dbManager.getSesionesDeSala(sala, fechaLocal);
+    }
+
+    @Override
+    public List<Factura> getFacturasPendientesDeSocio(Socio socio) {
         return dbManager.getFacturasPendientesDeSocio(socio);
     }
-	@Override
+
+    @Override
     public void cancelarReserva(Reserva reserva) throws Exception {
         dbManager.cancelarReserva(reserva);
     }
 }
-

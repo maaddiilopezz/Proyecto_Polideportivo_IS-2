@@ -37,7 +37,7 @@ public class CrearSesionDatosGUI extends JFrame {
         jLabelHoraInicio.setBounds(50, 260, 120, 25); 
         this.getContentPane().add(jLabelHoraInicio);
 
-        String[] horasInicio = new String[14]; // 8:00 a 21:00
+        String[] horasInicio = new String[14];
         for (int i = 0; i < 14; i++) {
             int hora = 8 + i;
             horasInicio[i] = String.format("%02d:00", hora);
@@ -50,7 +50,7 @@ public class CrearSesionDatosGUI extends JFrame {
         jLabelHoraFin.setBounds(50, 300, 120, 25); 
         this.getContentPane().add(jLabelHoraFin);
 
-        String[] horasFin = new String[14]; 
+        String[] horasFin = new String[14];
         for (int i = 0; i < 14; i++) {
             int hora = 9 + i;
             horasFin[i] = String.format("%02d:00", hora);
@@ -91,7 +91,6 @@ public class CrearSesionDatosGUI extends JFrame {
                 java.util.Date fechaSeleccionada = jCalendar1.getDate();
                 java.sql.Date fechaSql = new java.sql.Date(fechaSeleccionada.getTime());
                 java.time.LocalDate fechaLocal = fechaSeleccionada.toInstant().atZone(java.time.ZoneId.systemDefault()).toLocalDate();
-                // Abrir ConfirmarSesionCreadaGUI pasando fecha, horaInicio y horaFin
                 ConfirmarSesionCreadaGUI confirmarSesionCreadaGUI = new ConfirmarSesionCreadaGUI(fechaLocal, horaInicio, horaFin);
                 confirmarSesionCreadaGUI.setVisible(true);
                 this.dispose();

@@ -32,25 +32,20 @@ public class DataAccess {
     ConfigXML c = ConfigXML.getInstance();
 
     public DataAccess() {
-        // Inicializa la base de datos si no existe o si está vacía
         String fileName = c.getDbFilename();
         open();
         try {
-            // Comprobar si la base de datos está vacía (sin socios, encargados, salas o
-            // actividades)
             long numSocios = (long) db.createQuery("SELECT COUNT(s) FROM Socio s").getSingleResult();
             long numEncargados = (long) db.createQuery("SELECT COUNT(e) FROM Encargado e").getSingleResult();
             long numSalas = (long) db.createQuery("SELECT COUNT(s) FROM Sala s").getSingleResult();
             long numActividades = (long) db.createQuery("SELECT COUNT(a) FROM Actividad a").getSingleResult();
             if (numSocios == 0 && numEncargados == 0 && numSalas == 0 && numActividades == 0) {
-                // Si la base de datos está vacía, se fuerza la inicialización
                 initializeDB();
                 System.out.println("DataAccess: Base de datos creada e inicializada (forzado SIEMPRE)");
                 System.out.println("[DEBUG] Ruta real de la base de datos: " + fileName);
             }
         } catch (Exception ex) {
             System.err.println("[ERROR] Error comprobando si la base de datos está vacía: " + ex.getMessage());
-            // Si hay error, forzamos inicialización
             initializeDB();
             System.out.println("DataAccess: Base de datos creada e inicializada (forzado SIEMPRE)");
             System.out.println("[DEBUG] Ruta real de la base de datos: " + fileName);
@@ -69,7 +64,8 @@ public class DataAccess {
             properties.put("javax.persistence.jdbc.password", c.getPassword());
 
             emf = Persistence.createEntityManagerFactory(
-                "objectdb://" + c.getDatabaseNode() + ":" + c.getDatabasePort() + "/" + c.getDbFilename(), properties);
+                    "objectdb://" + c.getDatabaseNode() + ":" + c.getDatabasePort() + "/" + c.getDbFilename(),
+                    properties);
             db = emf.createEntityManager();
         }
         System.out.println("DataAccess opened => isDatabaseLocal: " + c.isDatabaseLocal());
@@ -105,11 +101,10 @@ public class DataAccess {
             Socio so1 = new Socio("11111111", "Socio 1", "socio1@gmail.com", "Socio1", 11111111);
             so1.setMaximoReservas(3);
             db.persist(so1);
-            System.out.println("[DEBUG] Socio creado y persistido"); // Crear Encargados
+            System.out.println("[DEBUG] Socio creado y persistido"); 
             System.out.println("[DEBUG] Creando encargados de prueba...");
             Encargado e1 = new Encargado("11111111", "Encargado 1", "encargado1@gmail.com", "Encargado1");
             db.persist(e1);
-            // Crear un encargado de ejemplo
             Encargado e2 = new Encargado("22222222", "Encargado 2", "encargado2@gmail.com", "Encargado2");
             db.persist(e2);
             System.out.println("[DEBUG] Encargados creados y persistidos");
@@ -126,7 +121,7 @@ public class DataAccess {
             db.persist(sa3);
             db.persist(sa4);
             db.persist(sa5);
-            System.out.println("[DEBUG] Salas creadas y persistidas"); // Crear Actividades
+            System.out.println("[DEBUG] Salas creadas y persistidas"); 
             System.out.println("[DEBUG] Creando actividades de prueba...");
             Actividad a1 = new Actividad("Zumba", 2, 6);
             Actividad a2 = new Actividad("Yoga", 2, 5);
@@ -146,8 +141,8 @@ public class DataAccess {
             db.persist(a7);
             db.persist(a8);
             db.persist(a9);
-            System.out.println("[DEBUG] Actividades creadas y persistidas"); // Crear sesiones y asociarlas
-                                                                             // correctamente
+            System.out.println("[DEBUG] Actividades creadas y persistidas"); 
+                                                                             
             LocalDate hoy = LocalDate.now();
             LocalDate lunes = hoy.minusDays(hoy.getDayOfWeek().getValue() - 1);
 
@@ -197,7 +192,6 @@ public class DataAccess {
                 System.out.println("[DEBUG] Abriendo EntityManager en registrarSocio");
                 open();
             }
-            // Comprobar si ya existe un socio con el mismo mail (NO por mail+contraseña)
             System.out.println("[DEBUG] Comprobando si existe socio con mail: " + mail);
             TypedQuery<Socio> query = db.createQuery(
                     "SELECT s FROM Socio s WHERE s.mail = :mail", Socio.class);
@@ -209,8 +203,6 @@ public class DataAccess {
                 System.err.println("[ERROR] Ya existe un socio con ese mail.");
                 throw new SocioAlreadyExistException("Ya existe un socio con ese mail.");
             }
-
-            // Crear y guardar nuevo socio
             nuevoSocio = new Socio(dni, nombre, mail, contraseña, numeroTarjeta);
             System.out.println("[DEBUG] Iniciando transacción para persistir nuevo socio");
             db.getTransaction().begin();
@@ -219,7 +211,7 @@ public class DataAccess {
             System.out.println("[DEBUG] Socio registrado correctamente");
         } catch (SocioAlreadyExistException e) {
             System.err.println("[ERROR] " + e.getMessage());
-            throw e; // se propaga al llamador
+            throw e; 
         } catch (Exception e) {
             System.err.println("[ERROR] Error inesperado al registrar socio: " + e.getMessage());
             e.printStackTrace();
@@ -238,7 +230,6 @@ public class DataAccess {
             if (db == null || !db.isOpen()) {
                 open();
             }
-            // Buscar si es un socio
             TypedQuery<Socio> querySocio = db.createQuery(
                     "SELECT s FROM Socio s WHERE s.mail = :correo AND s.contraseña = :contraseña", Socio.class);
             querySocio.setParameter("correo", correo);
@@ -246,10 +237,9 @@ public class DataAccess {
 
             List<Socio> resultadosSocio = querySocio.getResultList();
             if (!resultadosSocio.isEmpty()) {
-                return resultadosSocio.get(0); // Devuelve el Socio autenticado
+                return resultadosSocio.get(0); 
             }
 
-            // Buscar si es un encargado
             TypedQuery<Encargado> queryEncargado = db.createQuery(
                     "SELECT e FROM Encargado e WHERE e.mail = :correo AND e.contraseña = :contraseña", Encargado.class);
             queryEncargado.setParameter("correo", correo);
@@ -257,16 +247,15 @@ public class DataAccess {
 
             List<Encargado> resultadosEncargado = queryEncargado.getResultList();
             if (!resultadosEncargado.isEmpty()) {
-                return resultadosEncargado.get(0); // Devuelve el Encargado autenticado
+                return resultadosEncargado.get(0); 
             }
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return null; // Si no encontró ni socio ni encargado
+        return null; 
     }
 
-    // Método para obtener todas las actividades.
     public List<Actividad> getActividades() {
         if (db == null || !db.isOpen()) {
             open();
@@ -281,7 +270,6 @@ public class DataAccess {
         return actividades;
     }
 
-    // Método para obtener las salas, independientemente de si están libres o no
     public List<Sala> getTodasLasSalas() {
         if (db == null || !db.isOpen()) {
             open();
@@ -303,29 +291,53 @@ public class DataAccess {
         System.out.println("  Hora inicio: " + horaInicio);
         System.out.println("  Hora fin: " + horaFin);
 
-        if (actividad == null) throw new IllegalArgumentException("Actividad es null");
-        if (sala == null) throw new IllegalArgumentException("Sala es null");
-        if (fecha == null) throw new IllegalArgumentException("Fecha es null");
-        if (horaInicio == null) throw new IllegalArgumentException("Hora inicio es null");
-        if (horaFin == null) throw new IllegalArgumentException("Hora fin es null");
+        if (actividad == null)
+            throw new IllegalArgumentException("Actividad es null");
+        if (sala == null)
+            throw new IllegalArgumentException("Sala es null");
+        if (fecha == null)
+            throw new IllegalArgumentException("Fecha es null");
+        if (horaInicio == null)
+            throw new IllegalArgumentException("Hora inicio es null");
+        if (horaFin == null)
+            throw new IllegalArgumentException("Hora fin es null");
 
+        if (db == null || !db.isOpen()) {
+            open();
+        }
         try {
             actividad = db.merge(actividad);
             sala = db.merge(sala);
 
+            System.out.println("[DEBUG] Después de merge - Actividad: " + actividad.getId());
+            System.out.println("[DEBUG] Después de merge - Sala: " + sala.getNombreSala());
+
             Sesion sesion = new Sesion(actividad, sala, fecha, horaInicio, horaFin);
+            System.out.println("[DEBUG] Sesión creada con ID: " + sesion.getId());
 
-            // Añadir la sesión a la actividad (relación bidireccional)
             actividad.addSesion(sesion);
+            System.out.println("[DEBUG] Sesión añadida a actividad. Total sesiones en actividad: "
+                    + actividad.getSesiones().size());
 
-            // Persistir la sesión
+            sala.getSesiones().add(sesion);
+            System.out.println("[DEBUG] Sesión añadida a sala. Total sesiones en sala: " + sala.getSesiones().size());
+
             db.getTransaction().begin();
             db.persist(sesion);
+            System.out.println("[DEBUG] Sesión persistida");
+
+            db.merge(actividad);
+            System.out.println("[DEBUG] Actividad merged");
+            db.merge(sala);
+            System.out.println("[DEBUG] Sala merged");
+
             db.getTransaction().commit();
+            System.out.println("[DEBUG] Transacción committed");
         } catch (Exception e) {
             System.err.println("[ERROR] Excepción en crearSesion: " + e.getMessage());
             e.printStackTrace();
-            if (db.getTransaction().isActive()) db.getTransaction().rollback();
+            if (db.getTransaction().isActive())
+                db.getTransaction().rollback();
             throw e;
         }
     }
@@ -357,7 +369,6 @@ public class DataAccess {
             query.setParameter("dniParam", socio.getDni());
             List<Reserva> todas = query.getResultList();
             for (Reserva r : todas) {
-                // Solo mostrar reservas que NO estén asociadas a una factura enviada (pagada)
                 String jpqlFactura = "SELECT f FROM Factura f WHERE f.socio.dni = :dniParam AND f.enviada = true";
                 TypedQuery<Factura> qf = db.createQuery(jpqlFactura, Factura.class);
                 qf.setParameter("dniParam", socio.getDni());
@@ -369,7 +380,8 @@ public class DataAccess {
                         break;
                     }
                 }
-                if (!pagada) reservas.add(r);
+                if (!pagada)
+                    reservas.add(r);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -378,7 +390,10 @@ public class DataAccess {
     }
 
     public List<Sesion> getSesionesPorFiltros(String nombreActividad, Integer gradoExigencia) {
-        // Asegurarse de que el EntityManager está abierto
+        System.out.println("[DEBUG] getSesionesPorFiltros llamado con:");
+        System.out.println("  nombreActividad: " + nombreActividad);
+        System.out.println("  gradoExigencia: " + gradoExigencia);
+
         if (db == null || !db.isOpen()) {
             open();
         }
@@ -393,18 +408,31 @@ public class DataAccess {
                 jpql.append("AND s.actividad.gradoExigencia = :gradoExigencia ");
             }
 
+            System.out.println("[DEBUG] JPQL construido: " + jpql.toString());
             TypedQuery<Sesion> query = db.createQuery(jpql.toString(), Sesion.class);
 
             if (nombreActividad != null && !nombreActividad.isEmpty()) {
                 query.setParameter("nombreActividad", nombreActividad);
+                System.out.println("[DEBUG] Parámetro nombreActividad establecido: " + nombreActividad);
             }
             if (gradoExigencia != null) {
                 query.setParameter("gradoExigencia", gradoExigencia);
+                System.out.println("[DEBUG] Parámetro gradoExigencia establecido: " + gradoExigencia);
             }
 
             sesionesFiltradas = query.getResultList();
+            System.out.println("[DEBUG] Sesiones encontradas: " + sesionesFiltradas.size());
+
+            for (int i = 0; i < sesionesFiltradas.size(); i++) {
+                Sesion s = sesionesFiltradas.get(i);
+                System.out.println("[DEBUG] Sesión " + i + ": " + s.getId() +
+                        " - Actividad: " + (s.getActividad() != null ? s.getActividad().getNombreActividad() : "null") +
+                        " - Sala: " + (s.getSala() != null ? s.getSala().getNombreSala() : "null") +
+                        " - Fecha: " + s.getFechaImparticion());
+            }
 
         } catch (Exception e) {
+            System.err.println("[ERROR] Excepción en getSesionesPorFiltros: " + e.getMessage());
             e.printStackTrace();
         }
 
@@ -412,51 +440,43 @@ public class DataAccess {
     }
 
     public String getTipoUsuario(String correo) {
-        // Primero se verifica si es un Socio
         TypedQuery<Socio> querySocio = db.createQuery("SELECT s FROM Socio s WHERE s.mail = :correo", Socio.class);
         querySocio.setParameter("correo", correo);
         List<Socio> socios = querySocio.getResultList();
 
-        // Si es un Socio, se retorna "socio"
         if (!socios.isEmpty()) {
             return "Socio";
         }
 
-        // Si no es Socio, se verifica si es un Encargado
         TypedQuery<Encargado> queryEncargado = db.createQuery("SELECT e FROM Encargado e WHERE e.mail = :correo",
                 Encargado.class);
         queryEncargado.setParameter("correo", correo);
         List<Encargado> encargados = queryEncargado.getResultList();
 
-        // Si es un Encargado, se retorna "encargado"
         if (!encargados.isEmpty()) {
             return "Encargado";
         }
 
-        // Si no es ni Socio ni Encargado, se retorna "desconocido"
         return "Desconocido";
     }
 
     public void reservarSesion(Socio socio, Sesion sesion) throws Exception {
-        // Debug: Log de los objetos recibidos
         System.out.println("[DEBUG] reservarSesion - Socio recibido: " + socio);
         System.out.println("[DEBUG] reservarSesion - Sesion recibida: " + sesion);
-
-        // Validar que los parámetros no sean null
         if (socio == null) {
             throw new Exception("El socio no puede ser null.");
         }
         if (sesion == null) {
             throw new Exception("La sesión no puede ser null.");
-        } // Debug: Log de los IDs
+        }
         System.out.println("[DEBUG] reservarSesion - DNI del socio: '" + socio.getDni() + "'");
         System.out.println("[DEBUG] reservarSesion - ID de la sesion: '" + sesion.getId() + "'");
 
-        // Recuperar los objetos actuales de la base de datos
+        
         String socioId = socio.getDni();
         String sesionId = sesion.getId();
 
-        // Validar que los IDs no sean null
+        
         if (socioId == null || socioId.trim().isEmpty()) {
             throw new Exception("El DNI del socio no puede ser null o vacío.");
         }
@@ -464,29 +484,26 @@ public class DataAccess {
             throw new Exception("El ID de la sesión no puede ser null o vacío.");
         }
 
-        // Recuperar el socio actual de la base de datos
+        
         Socio socioActual = db.find(Socio.class, socioId);
         if (socioActual == null) {
             throw new Exception("Socio no encontrado en la base de datos con DNI: " + socioId);
         }
 
-        // Recuperar la sesión actual de la base de datos
+        
         Sesion sesionActual = db.find(Sesion.class, sesionId);
         if (sesionActual == null) {
             throw new Exception("Sesión no encontrada en la base de datos con ID: " + sesionId);
         }
 
-        // Comprobar máximo de reservas
         if (socioActual.getReservas().size() >= socioActual.getMaximoReservas()) {
             throw new Exception("Has alcanzado el máximo de reservas permitidas.");
         }
-        // Comprobar si el socio ya tiene una reserva para esta sesión
         for (Reserva r : socioActual.getReservas()) {
             if (r.getSesion() != null && r.getSesion().getId().equals(sesionActual.getId())) {
                 throw new Exception("Ya tienes una reserva para esta sesión.");
             }
         }
-        // Comprobar si hay plazas disponibles en la sala para la sesión
         Sala sala = sesionActual.getSala();
         System.out.println("[DEBUG] Sala asociada: " + sala);
         if (sala == null) {
@@ -497,7 +514,6 @@ public class DataAccess {
         if (sesionActual.getPlazasOcupadas() >= sala.getAforoMaximo()) {
             throw new Exception("No hay plazas disponibles en la sala para esta sesión.");
         }
-        // Generar idReserva único
         String idReserva;
         boolean idUnico = false;
         do {
@@ -510,31 +526,25 @@ public class DataAccess {
         } while (!idUnico);
         db.getTransaction().begin();
         try {
-            // Los objetos ya están gestionados por el EntityManager al haberlos recuperado
-            // con find()
-
-            // Crear la reserva y actualizar aforo
+           
             Reserva reserva = new Reserva(idReserva, new java.util.Date(), true);
             reserva.setSesion(sesionActual);
             reserva.setSocio(socioActual);
             socioActual.addReserva(reserva);
             sesionActual.addReserva(reserva);
-            // Incrementar el contador de reservas activas
             socioActual.setNumReservas(socioActual.getNumReservas() + 1);
             int nuevasPlazasOcupadas = sesionActual.getPlazasOcupadas() + 1;
-            sesionActual.setPlazasOcupadas(nuevasPlazasOcupadas); // Suma 1 a plazas ocupadas
+            sesionActual.setPlazasOcupadas(nuevasPlazasOcupadas); 
 
-            // Persistir la reserva (ahora todos los objetos referenciados están
-            // gestionados)
+            
             db.persist(reserva);
 
-            // Crear la factura
             double precio = sesionActual.getActividad().getPrecio();
             String codigoFactura = java.util.UUID.randomUUID().toString();
             java.util.Date fechaFactura = new java.util.Date();
             domain.Factura factura = new domain.Factura(precio, codigoFactura, fechaFactura);
-            factura.setEnviada(false); // Siempre pendiente al crear
-            factura.setSocio(socioActual); // Asocia la factura al socio
+            factura.setEnviada(false); 
+            factura.setSocio(socioActual);
             factura.addReserva(reserva);
             socioActual.addFactura(factura);
             db.persist(factura);
@@ -547,7 +557,6 @@ public class DataAccess {
         }
     }
 
-    // Método para pagar una factura
     public void pagarFactura(domain.Factura factura) throws Exception {
         if (db == null || !db.isOpen()) {
             open();
@@ -556,11 +565,10 @@ public class DataAccess {
         try {
             System.out.println("[DEBUG] Simulando cobro de factura: " + factura.getCodigoFactura() + ", importe: "
                     + factura.getPrecio());
-            Factura facturaGestionada = db.merge(factura); 
+            Factura facturaGestionada = db.merge(factura);
             Socio socio = facturaGestionada.getSocio();
             if (socio != null) {
                 socio = db.merge(socio);
-                // Eliminar todas las reservas asociadas a la factura
                 if (facturaGestionada.getReservas() != null) {
                     for (Reserva reserva : new ArrayList<>(facturaGestionada.getReservas())) {
                         reserva = db.merge(reserva);
@@ -696,7 +704,6 @@ public class DataAccess {
                     "SELECT f FROM Factura f WHERE f.socio.dni = :dniParam AND f.enviada = false", Factura.class);
             query.setParameter("dniParam", socio.getDni());
             facturasPendientes = query.getResultList();
-            // Marcar como enviadas
             db.getTransaction().begin();
             for (Factura f : facturasPendientes) {
                 f.setEnviada(true);
@@ -710,7 +717,7 @@ public class DataAccess {
         }
         return facturasPendientes;
     }
-    // Método para obtener las sesiones de una sala en una fecha específica
+
     public List<Sesion> getSesionesDeSala(Sala sala, LocalDate fecha) {
         if (db == null || !db.isOpen()) {
             open();
@@ -748,31 +755,36 @@ public class DataAccess {
     }
 
     public void cancelarReserva(Reserva reserva) throws Exception {
-        if (db == null || !db.isOpen()) open();
+        if (db == null || !db.isOpen())
+            open();
         db.getTransaction().begin();
         try {
             Reserva reservaActual = db.find(Reserva.class, reserva.getIdReserva());
-            if (reservaActual == null) throw new Exception("Reserva no encontrada");
+            if (reservaActual == null)
+                throw new Exception("Reserva no encontrada");
             Socio socio = reservaActual.getSocio();
             Sesion sesion = reservaActual.getSesion();
             if (socio != null) {
                 socio = db.merge(socio);
                 socio.removeReserva(reservaActual);
                 int num = socio.getNumReservas();
-                if (num > 0) socio.setNumReservas(num - 1);
+                if (num > 0)
+                    socio.setNumReservas(num - 1);
                 db.merge(socio);
             }
             if (sesion != null) {
                 sesion = db.merge(sesion);
                 sesion.removeReserva(reservaActual);
                 int plazas = sesion.getPlazasOcupadas();
-                if (plazas > 0) sesion.setPlazasOcupadas(plazas - 1);
+                if (plazas > 0)
+                    sesion.setPlazasOcupadas(plazas - 1);
                 db.merge(sesion);
             }
             db.remove(reservaActual);
             db.getTransaction().commit();
         } catch (Exception e) {
-            if (db.getTransaction().isActive()) db.getTransaction().rollback();
+            if (db.getTransaction().isActive())
+                db.getTransaction().rollback();
             throw e;
         }
     }

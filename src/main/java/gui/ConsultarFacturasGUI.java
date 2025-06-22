@@ -36,7 +36,7 @@ public class ConsultarFacturasGUI extends JFrame {
         JScrollPane scrollPane = new JScrollPane(listaFacturas);
         contentPane.add(scrollPane, BorderLayout.CENTER);
 
-        JButton botonAtras = new JButton("\u2190"); // ←
+        JButton botonAtras = new JButton("\u2190");
         botonAtras.setBounds(10, 10, 50, 25);
         contentPane.add(botonAtras, BorderLayout.SOUTH);
         botonAtras.addActionListener(e -> {
@@ -76,7 +76,6 @@ public class ConsultarFacturasGUI extends JFrame {
 
     private void cargarFacturas(Socio socio) {
         DefaultListModel<Factura> model = new DefaultListModel<>();
-        // Mostrar solo facturas enviadas (para pagar)
         List<Factura> facturas = businessLogic.getFacturasDeSocio(socio);
         if (facturas != null) {
             for (Factura f : facturas) {

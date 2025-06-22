@@ -7,6 +7,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.LinkedHashSet;
+import java.util.Set;
 import domain.Actividad;
 import domain.Sala;
 
@@ -38,15 +40,15 @@ public class ConfirmarSesionCreadaGUI extends JFrame {
         JLabel labelActividadSel = new JLabel(ResourceBundleUtil.getString("ConfirmarSesionCreadaGUI.Actividad"));
         labelActividadSel.setBounds(labelX, yOffset, labelWidth, 21);
         panelDatos.add(labelActividadSel);
-        // Usar ComboBox con modelo personalizado para mostrar solo el nombre de la actividad
+        // actividad
         DefaultComboBoxModel<Actividad> modeloActividades = new DefaultComboBoxModel<>();
-        for (Actividad a : facade.getActividades()) modeloActividades.addElement(a);
         JComboBox<Actividad> comboActividad = new JComboBox<>(modeloActividades);
         comboActividad.setBounds(fieldX, yOffset, fieldWidth, 21);
         // Renderizador para mostrar solo el nombre
         comboActividad.setRenderer(new DefaultListCellRenderer() {
             @Override
-            public java.awt.Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
+            public java.awt.Component getListCellRendererComponent(JList<?> list, Object value, int index,
+                    boolean isSelected, boolean cellHasFocus) {
                 super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
                 if (value instanceof Actividad) {
                     setText(((Actividad) value).getNombreActividad());
@@ -59,14 +61,13 @@ public class ConfirmarSesionCreadaGUI extends JFrame {
         JLabel labelSalaSel = new JLabel(ResourceBundleUtil.getString("ConfirmarSesionCreadaGUI.Sala"));
         labelSalaSel.setBounds(labelX, yOffset + 40, labelWidth, 21);
         panelDatos.add(labelSalaSel);
-        // ComboBox de salas con modelo personalizado para mostrar "Sala x"
         DefaultComboBoxModel<Sala> modeloSalas = new DefaultComboBoxModel<>();
-        for (Sala s : facade.getTodasLasSalas()) modeloSalas.addElement(s);
         JComboBox<Sala> comboSala = new JComboBox<>(modeloSalas);
         comboSala.setBounds(fieldX, yOffset + 40, fieldWidth, 21);
         comboSala.setRenderer(new DefaultListCellRenderer() {
             @Override
-            public java.awt.Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
+            public java.awt.Component getListCellRendererComponent(JList<?> list, Object value, int index,
+                    boolean isSelected, boolean cellHasFocus) {
                 super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
                 if (value instanceof Sala) {
                     // Si el nombre ya es "Sala x", lo muestra tal cual, si no, antepone "Sala "
@@ -82,23 +83,26 @@ public class ConfirmarSesionCreadaGUI extends JFrame {
         });
         panelDatos.add(comboSala);
 
-        // Mostrar fecha y horas
-        JLabel labelFechaSel = new JLabel(ResourceBundleUtil.getString("ConfirmarSesionCreadaGUI.Fecha") + ": " + fecha.toString());
+        
+        JLabel labelFechaSel = new JLabel(
+                ResourceBundleUtil.getString("ConfirmarSesionCreadaGUI.Fecha") + ": " + fecha.toString());
         labelFechaSel.setBounds(labelX, yOffset + 80, labelWidth + fieldWidth, 21);
         panelDatos.add(labelFechaSel);
-        JLabel labelHoraInicioSel = new JLabel(ResourceBundleUtil.getString("ConfirmarSesionCreadaGUI.HoraInicio") + ": " + horaInicio.toString());
+        JLabel labelHoraInicioSel = new JLabel(
+                ResourceBundleUtil.getString("ConfirmarSesionCreadaGUI.HoraInicio") + ": " + horaInicio.toString());
         labelHoraInicioSel.setBounds(labelX, yOffset + 110, labelWidth + fieldWidth, 21);
         panelDatos.add(labelHoraInicioSel);
-        JLabel labelHoraFinSel = new JLabel(ResourceBundleUtil.getString("ConfirmarSesionCreadaGUI.HoraFin") + ": " + horaFin.toString());
+        JLabel labelHoraFinSel = new JLabel(
+                ResourceBundleUtil.getString("ConfirmarSesionCreadaGUI.HoraFin") + ": " + horaFin.toString());
         labelHoraFinSel.setBounds(labelX, yOffset + 140, labelWidth + fieldWidth, 21);
         panelDatos.add(labelHoraFinSel);
 
-        // Botón confirmar
+        
         JButton botonConfirmar = new JButton(ResourceBundleUtil.getString("ConfirmarSesionCreadaGUI.Confirmar"));
         botonConfirmar.setBounds((panelWidth - 140) / 2, yOffset + 190, 140, 29);
         panelDatos.add(botonConfirmar);
 
-        // Botón atrás
+        
         JButton botonAtras = new JButton("\u2190");
         botonAtras.setBounds(10, 10, 50, 25);
         panelDatos.add(botonAtras);
@@ -106,12 +110,15 @@ public class ConfirmarSesionCreadaGUI extends JFrame {
             new CrearSesionDatosGUI(fecha, horaInicio, horaFin).setVisible(true);
             dispose();
         });
-
-        // Cargar actividades y salas usando la fachada
         java.util.List<Actividad> actividades = facade.getActividades();
-        for (Actividad a : actividades) comboActividad.addItem(a);
+        Set<Actividad> actividadesUnicas = new LinkedHashSet<>(actividades);
+        for (Actividad a : actividadesUnicas)
+            comboActividad.addItem(a);
+
         java.util.List<Sala> salas = facade.getTodasLasSalas();
-        for (Sala s : salas) comboSala.addItem(s);
+        Set<Sala> salasUnicas = new LinkedHashSet<>(salas);
+        for (Sala s : salasUnicas)
+            comboSala.addItem(s);
 
         // Acción confirmar
         botonConfirmar.addActionListener(e -> {
@@ -122,11 +129,15 @@ public class ConfirmarSesionCreadaGUI extends JFrame {
                 return;
             }
             try {
-                facade.crearSesion(actividadSel, salaSel, fecha, horaInicio, horaFin);
-                JOptionPane.showMessageDialog(this, "Sesión confirmada y creada en la base de datos.", "Confirmación", JOptionPane.INFORMATION_MESSAGE);
+                facade.crearSesion(actividadSel, salaSel, fecha.toString(), horaInicio.toString(), horaFin.toString());
+                JOptionPane.showMessageDialog(this, "Sesión confirmada y creada en la base de datos.", "Confirmación",
+                        JOptionPane.INFORMATION_MESSAGE);
+                // Volver al menú del encargado
+                new InicioEncargadoGUI().setVisible(true);
                 this.dispose();
             } catch (Exception ex) {
-                JOptionPane.showMessageDialog(this, "Error al crear la sesión: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Error al crear la sesión: " + ex.getMessage(), "Error",
+                        JOptionPane.ERROR_MESSAGE);
             }
         });
 
@@ -154,7 +165,8 @@ public class ConfirmarSesionCreadaGUI extends JFrame {
     private JLabel mostrarHoraInicio;
     private JLabel mostrarHoraFIn;
 
-    public ConfirmarSesionCreadaGUI(Actividad actividad, Sala sala, LocalDate fecha, LocalTime horaInicio, LocalTime horaFin) {
+    public ConfirmarSesionCreadaGUI(Actividad actividad, Sala sala, LocalDate fecha, LocalTime horaInicio,
+            LocalTime horaFin) {
         this.actividad = actividad;
         this.sala = sala;
         this.fecha = fecha;
@@ -171,7 +183,7 @@ public class ConfirmarSesionCreadaGUI extends JFrame {
         setLocationRelativeTo(null);
         getContentPane().setLayout(new BorderLayout(10, 10));
 
-        // Panel para mostrar datos
+        
         JPanel panelDatos = new JPanel();
         panelDatos.setLayout(null);
 
@@ -192,7 +204,7 @@ public class ConfirmarSesionCreadaGUI extends JFrame {
         panelDatos.add(labelHoraInicio);
         panelDatos.add(labelHoraFin);
 
-        // Labels para mostrar valores elegidos
+        
         mostrarActividad = new JLabel(actividad.getNombreActividad());
         mostrarActividad.setBounds(221, 22, 150, 16);
         panelDatos.add(mostrarActividad);
@@ -212,23 +224,27 @@ public class ConfirmarSesionCreadaGUI extends JFrame {
         mostrarHoraFIn = new JLabel(horaFin.toString());
         mostrarHoraFIn.setBounds(221, 145, 150, 16);
         panelDatos.add(mostrarHoraFIn);
-
         botonConfirmar = new JButton(ResourceBundleUtil.getString("ConfirmarSesionCreadaGUI.Confirmar"));
         botonConfirmar.setBounds(136, 184, 107, 29);
         panelDatos.add(botonConfirmar);
 
-        // Acción botón confirmar
+        
         botonConfirmar.addActionListener(e -> {
             try {
-                InicioGUI.getBusinessLogic().crearSesion(actividad, sala, fecha, horaInicio, horaFin);
-                JOptionPane.showMessageDialog(this, "Sesión confirmada y creada en la base de datos.", "Confirmación", JOptionPane.INFORMATION_MESSAGE);
+                InicioGUI.getBusinessLogic().crearSesion(actividad, sala, fecha.toString(), horaInicio.toString(),
+                        horaFin.toString());
+                JOptionPane.showMessageDialog(this, "Sesión confirmada y creada en la base de datos.", "Confirmación",
+                        JOptionPane.INFORMATION_MESSAGE);
+                // Volver al menú del encargado
+                new InicioEncargadoGUI().setVisible(true);
                 this.dispose();
             } catch (Exception ex) {
-                JOptionPane.showMessageDialog(this, "Error al crear la sesión: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Error al crear la sesión: " + ex.getMessage(), "Error",
+                        JOptionPane.ERROR_MESSAGE);
             }
         });
 
-        JButton botonAtras = new JButton("\u2190"); // ←
+        JButton botonAtras = new JButton("\u2190");
         botonAtras.setBounds(10, 10, 50, 25);
         panelDatos.add(botonAtras);
         botonAtras.addActionListener(e -> {
@@ -238,7 +254,7 @@ public class ConfirmarSesionCreadaGUI extends JFrame {
 
         getContentPane().add(panelDatos, BorderLayout.CENTER);
 
-        // Panel para botones adicional si quieres
+        
         JPanel panelBotones = new JPanel();
         getContentPane().add(panelBotones, BorderLayout.SOUTH);
     }

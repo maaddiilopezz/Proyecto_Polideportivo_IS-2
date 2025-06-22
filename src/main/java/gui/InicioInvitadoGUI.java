@@ -7,6 +7,8 @@ import domain.Sesion;
 import businessLogic.BLFacade;
 import java.awt.*;
 import java.util.List;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 public class InicioInvitadoGUI extends JFrame {
 
@@ -31,10 +33,10 @@ public class InicioInvitadoGUI extends JFrame {
 
         modeloTabla = new DefaultTableModel();
         modeloTabla.setColumnIdentifiers(new String[] {
-            ResourceBundleUtil.getString("inicioInvitado.columna.fecha"),
-            ResourceBundleUtil.getString("inicioInvitado.columna.horaInicio"),
-            ResourceBundleUtil.getString("inicioInvitado.columna.horaFin"),
-            ResourceBundleUtil.getString("inicioInvitado.columna.sala")
+                ResourceBundleUtil.getString("inicioInvitado.columna.fecha"),
+                ResourceBundleUtil.getString("inicioInvitado.columna.horaInicio"),
+                ResourceBundleUtil.getString("inicioInvitado.columna.horaFin"),
+                ResourceBundleUtil.getString("inicioInvitado.columna.sala")
         });
         tablaSesiones = new JTable(modeloTabla);
         JScrollPane scrollPane = new JScrollPane(tablaSesiones);
@@ -48,11 +50,8 @@ public class InicioInvitadoGUI extends JFrame {
             new InicioGUI().setVisible(true);
             dispose();
         });
-
-        List<Actividad> actividades = facade.getActividades(); // Suponiendo que tienes este método
-        for (Actividad act : actividades) {
-            comboActividades.addItem(act);
-        }
+        comboActividades.removeAllItems(); // Limpiar elementos previos para evitar duplicados
+        cargarActividades();
 
         comboActividades.addActionListener(e -> {
             Actividad actividadSeleccionada = (Actividad) comboActividades.getSelectedItem();
@@ -61,8 +60,20 @@ public class InicioInvitadoGUI extends JFrame {
             }
         });
 
-        if (!actividades.isEmpty()) {
-            comboActividades.setSelectedIndex(0);  // Para cargar automáticamente
+        if (comboActividades.getItemCount() > 0) {
+            comboActividades.setSelectedIndex(0); // Para cargar automáticamente
+        }
+    }
+
+    private void cargarActividades() {
+        List<Actividad> actividades = facade.getActividades();
+
+        // Usar LinkedHashSet para eliminar duplicados manteniendo el orden
+        Set<Actividad> actividadesUnicas = new LinkedHashSet<>(actividades);
+
+        // Agregar al combobox solo las actividades únicas
+        for (Actividad actividad : actividadesUnicas) {
+            comboActividades.addItem(actividad);
         }
     }
 
@@ -71,10 +82,11 @@ public class InicioInvitadoGUI extends JFrame {
         modeloTabla.setRowCount(0);
         for (Sesion s : sesiones) {
             modeloTabla.addRow(new Object[] {
-                s.getFechaImparticion(),
-                s.getHoraInicio(),
-                s.getHoraFinal(),
-                s.getSala() != null ? s.getSala().getNombreSala() : ResourceBundleUtil.getString("inicioInvitado.salaNoAsignada")
+                    s.getFechaImparticion(),
+                    s.getHoraInicio(),
+                    s.getHoraFinal(),
+                    s.getSala() != null ? s.getSala().getNombreSala()
+                            : ResourceBundleUtil.getString("inicioInvitado.salaNoAsignada")
             });
         }
     }

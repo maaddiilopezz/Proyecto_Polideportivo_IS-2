@@ -5,6 +5,8 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 import businessLogic.BLFacade;
 import domain.Sesion;
@@ -33,7 +35,7 @@ public class ConsultarSesionesGUI extends JFrame {
         comboActividades = new JComboBox<>();
         cargarActividadesDesdeBD();
 
-        comboGradoExigencia = new JComboBox<>(new Integer[]{1, 2, 3, 4, 5});
+        comboGradoExigencia = new JComboBox<>(new Integer[] { 1, 2, 3, 4, 5 });
         JButton botonBuscar = new JButton("Buscar");
         JButton botonReservar = new JButton("Reservar");
 
@@ -49,16 +51,18 @@ public class ConsultarSesionesGUI extends JFrame {
         add(panelSuperior, BorderLayout.NORTH);
 
         String[] columnas = {
-            "Fecha",
-            "Hora Inicio",
-            "Hora Fin",
-            "Plazas Ocupadas",
-            "Actividad",
-            "Sala",
-            "Aforo Maximo"
+                "Fecha",
+                "Hora Inicio",
+                "Hora Fin",
+                "Plazas Ocupadas",
+                "Actividad",
+                "Sala",
+                "Aforo Maximo"
         };
         tablaModelo = new DefaultTableModel(columnas, 0) {
-            public boolean isCellEditable(int row, int column) { return false; }
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
         };
         tablaSesiones = new JTable(tablaModelo);
         JScrollPane scrollPane = new JScrollPane(tablaSesiones);
@@ -68,8 +72,11 @@ public class ConsultarSesionesGUI extends JFrame {
 
         BLFacade facade = InicioGUI.getBusinessLogic();
         List<Sesion> todasLasSesiones = facade.getSesionesPorFiltros(null, null);
-        System.out.println("[DEBUG] ConsultarSesionesGUI abiertas. Sesiones encontradas: " + (todasLasSesiones != null ? todasLasSesiones.size() : 0));
-        JOptionPane.showMessageDialog(this, "Sesiones encontradas: " + (todasLasSesiones != null ? todasLasSesiones.size() : 0), "Debug", JOptionPane.INFORMATION_MESSAGE);
+        System.out.println("[DEBUG] ConsultarSesionesGUI abiertas. Sesiones encontradas: "
+                + (todasLasSesiones != null ? todasLasSesiones.size() : 0));
+        JOptionPane.showMessageDialog(this,
+                "Sesiones encontradas: " + (todasLasSesiones != null ? todasLasSesiones.size() : 0), "Debug",
+                JOptionPane.INFORMATION_MESSAGE);
         if (todasLasSesiones != null && !todasLasSesiones.isEmpty()) {
             llenarTabla(todasLasSesiones);
         } else {
@@ -100,17 +107,20 @@ public class ConsultarSesionesGUI extends JFrame {
         botonReservar.addActionListener(e -> {
             int row = tablaSesiones.getSelectedRow();
             if (row == -1) {
-                JOptionPane.showMessageDialog(this, "Por favor, selecciona una sesión para reservar.", "Aviso", JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Por favor, selecciona una sesión para reservar.", "Aviso",
+                        JOptionPane.WARNING_MESSAGE);
                 return;
             }
             if (row >= 0 && row < sesionesMostradas.size()) {
                 Sesion sesionSeleccionada = sesionesMostradas.get(row);
                 // Comprobar si el socio puede reservar más sesiones
-                if (this.socio.getReservas() == null || this.socio.getReservas().size() < this.socio.getMaximoReservas()) {
+                if (this.socio.getReservas() == null
+                        || this.socio.getReservas().size() < this.socio.getMaximoReservas()) {
                     ReservarGUI reservarGUI = new ReservarGUI(this.socio, sesionSeleccionada);
                     reservarGUI.setVisible(true);
                 } else {
-                    JOptionPane.showMessageDialog(this, "Has alcanzado el máximo de reservas permitidas.", "No puedes reservar", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Has alcanzado el máximo de reservas permitidas.",
+                            "No puedes reservar", JOptionPane.ERROR_MESSAGE);
                 }
             }
         });
@@ -132,7 +142,7 @@ public class ConsultarSesionesGUI extends JFrame {
             }
         });
 
-        JButton botonAtras = new JButton("\u2190"); //  ȉ
+        JButton botonAtras = new JButton("\u2190");
         botonAtras.setToolTipText("Atrás");
         botonAtras.setFont(new Font("Arial", Font.PLAIN, 12));
         botonAtras.addActionListener(e -> {
@@ -148,22 +158,27 @@ public class ConsultarSesionesGUI extends JFrame {
         comboActividades.removeAllItems();
         BLFacade facade = InicioGUI.getBusinessLogic();
         List<Actividad> actividades = facade.getActividades();
+
+        Set<String> nombresActividades = new LinkedHashSet<>();
         for (Actividad actividad : actividades) {
-            comboActividades.addItem(actividad.getNombreActividad());
+            nombresActividades.add(actividad.getNombreActividad());
+        }
+        for (String nombreActividad : nombresActividades) {
+            comboActividades.addItem(nombreActividad);
         }
     }
 
     private void llenarTabla(List<Sesion> sesiones) {
         DateTimeFormatter formatterFecha = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         DateTimeFormatter formatterHora = DateTimeFormatter.ofPattern("HH:mm");
-        tablaModelo.setColumnIdentifiers(new String[]{
-            "Fecha",
-            "Hora Inicio",
-            "Hora Fin",
-            "Plazas Ocupadas",
-            "Actividad",
-            "Sala",
-            "Aforo Maximo"
+        tablaModelo.setColumnIdentifiers(new String[] {
+                "Fecha",
+                "Hora Inicio",
+                "Hora Fin",
+                "Plazas Ocupadas",
+                "Actividad",
+                "Sala",
+                "Aforo Maximo"
         });
         tablaModelo.setRowCount(0);
         sesionesMostradas.clear();
@@ -171,13 +186,13 @@ public class ConsultarSesionesGUI extends JFrame {
             String actividad = s.getActividad() != null ? s.getActividad().getNombreActividad() : "";
             String sala = s.getSala() != null ? s.getSala().getNombreSala() : "";
             Object[] fila = {
-                s.getFechaImparticion().format(formatterFecha),
-                s.getHoraInicio().format(formatterHora),
-                s.getHoraFinal().format(formatterHora),
-                s.getPlazasOcupadas(),
-                actividad,
-                sala,
-                s.getSala() != null ? s.getSala().getAforoMaximo() : "" // Mostrar aforo máximo en la tabla
+                    s.getFechaImparticion().format(formatterFecha),
+                    s.getHoraInicio().format(formatterHora),
+                    s.getHoraFinal().format(formatterHora),
+                    s.getPlazasOcupadas(),
+                    actividad,
+                    sala,
+                    s.getSala() != null ? s.getSala().getAforoMaximo() : ""
             };
             tablaModelo.addRow(fila);
             sesionesMostradas.add(s);

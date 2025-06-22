@@ -246,3 +246,1006 @@ Database '/Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resou
 [2025-06-22 02:04:00 #3 store] 
 Configuration path: /Users/maddilopez/Downloads/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/objectdb.conf
 
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 02:59:24 #1 server] 
+Server on port 6137 has started by 39512@Iaz7pc
+
+[2025-06-22 02:59:38 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 39512@Iaz7pc
+
+[2025-06-22 02:59:38 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 03:00:22 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 39512@Iaz7pc
+
+[2025-06-22 03:00:54 #5 server] 
+Server on port 6137 has stopped by 39512@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 03:01:46 #1 server] 
+Server on port 6137 has started by 42344@Iaz7pc
+
+[2025-06-22 03:02:02 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 42344@Iaz7pc
+
+[2025-06-22 03:02:02 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 03:05:37 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 42344@Iaz7pc
+
+[2025-06-22 03:06:08 #5 server] 
+Server on port 6137 has stopped by 42344@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 03:06:15 #1 server] 
+Server on port 6137 has started by 39392@Iaz7pc
+
+[2025-06-22 03:06:21 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 39392@Iaz7pc
+
+[2025-06-22 03:06:21 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 03:16:01 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 39392@Iaz7pc
+
+[2025-06-22 03:16:11 #5 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 39392@Iaz7pc
+
+[2025-06-22 03:16:11 #6 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 03:16:48 #7 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 39392@Iaz7pc
+
+[2025-06-22 03:16:49 #8 server] 
+Server on port 6137 has stopped by 39392@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 03:17:15 #1 server] 
+Server on port 6137 has started by 35188@Iaz7pc
+
+[2025-06-22 03:17:18 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 35188@Iaz7pc
+
+[2025-06-22 03:17:18 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 03:21:40 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 35188@Iaz7pc
+
+[2025-06-22 03:21:40 #5 server] 
+Server on port 6137 has stopped by 35188@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 03:25:46 #1 server] 
+Server on port 6137 has started by 39208@Iaz7pc
+
+[2025-06-22 03:25:46 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 39208@Iaz7pc
+
+[2025-06-22 03:25:46 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 03:28:49 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 39208@Iaz7pc
+
+[2025-06-22 03:28:51 #5 server] 
+Server on port 6137 has stopped by 39208@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 03:29:10 #1 server] 
+Server on port 6137 has started by 13604@Iaz7pc
+
+[2025-06-22 03:29:11 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 13604@Iaz7pc
+
+[2025-06-22 03:29:11 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 03:31:23 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 13604@Iaz7pc
+
+[2025-06-22 03:31:30 #5 server] 
+Server on port 6137 has stopped by 13604@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 03:31:52 #1 server] 
+Server on port 6137 has started by 34216@Iaz7pc
+
+[2025-06-22 03:31:53 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 34216@Iaz7pc
+
+[2025-06-22 03:31:53 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 03:35:02 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 34216@Iaz7pc
+
+[2025-06-22 03:35:04 #5 server] 
+Server on port 6137 has stopped by 34216@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 03:35:23 #1 server] 
+Server on port 6137 has started by 40948@Iaz7pc
+
+[2025-06-22 03:35:24 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 40948@Iaz7pc
+
+[2025-06-22 03:35:24 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 03:36:57 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 40948@Iaz7pc
+
+[2025-06-22 03:36:59 #5 server] 
+Server on port 6137 has stopped by 40948@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 03:39:43 #1 server] 
+Server on port 6137 has started by 26832@Iaz7pc
+
+[2025-06-22 03:39:44 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 26832@Iaz7pc
+
+[2025-06-22 03:39:44 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 03:39:59 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 26832@Iaz7pc
+
+[2025-06-22 03:40:01 #5 server] 
+Server on port 6137 has stopped by 26832@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 03:40:51 #1 server] 
+Server on port 6137 has started by 35916@Iaz7pc
+
+[2025-06-22 03:41:06 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 35916@Iaz7pc
+
+[2025-06-22 03:41:06 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 03:46:45 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 35916@Iaz7pc
+
+[2025-06-22 03:46:50 #5 server] 
+Server on port 6137 has stopped by 35916@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 03:47:14 #1 server] 
+Server on port 6137 has started by 32176@Iaz7pc
+
+[2025-06-22 03:47:15 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 32176@Iaz7pc
+
+[2025-06-22 03:47:15 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 03:47:15 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 32176@Iaz7pc
+
+[2025-06-22 03:47:24 #5 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 32176@Iaz7pc
+
+[2025-06-22 03:47:24 #6 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 03:47:25 #7 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 32176@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 03:52:32 #1 server] 
+java.net.BindException: Address already in use: bind
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:555)
+	at java.base/sun.nio.ch.Net.bind(Net.java:544)
+	at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:648)
+	at java.base/java.net.ServerSocket.bind(ServerSocket.java:388)
+	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:274)
+	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:218)
+	at com.objectdb.o.SMR.o(SMR.java:260)
+	at com.objectdb.o.SMR.f(SMR.java:160)
+	at com.objectdb.o.TOL.run(TOL.java:117)
+	at com.objectdb.Server.runCommand(Server.java:200)
+	at com.objectdb.Server.run(Server.java:104)
+	at com.objectdb.Server.main(Server.java:63)
+
+[2025-06-22 03:52:40 #8 server] 
+Server on port 6137 has stopped by 32176@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 03:52:44 #1 server] 
+Server on port 6137 has started by 568@Iaz7pc
+
+[2025-06-22 03:52:46 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 568@Iaz7pc
+
+[2025-06-22 03:52:46 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 03:52:47 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 568@Iaz7pc
+
+[2025-06-22 03:53:06 #5 server] 
+Server on port 6137 has stopped by 568@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 03:53:32 #1 server] 
+Server on port 6137 has started by 18128@Iaz7pc
+
+[2025-06-22 03:53:41 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 18128@Iaz7pc
+
+[2025-06-22 03:53:41 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 03:58:18 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 18128@Iaz7pc
+
+[2025-06-22 03:58:29 #5 server] 
+Server on port 6137 has stopped by 18128@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 03:58:32 #1 server] 
+Server on port 6137 has started by 38600@Iaz7pc
+
+[2025-06-22 03:58:36 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 38600@Iaz7pc
+
+[2025-06-22 03:58:36 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 03:58:43 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 38600@Iaz7pc
+
+[2025-06-22 03:58:45 #5 server] 
+Server on port 6137 has stopped by 38600@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 03:59:09 #1 server] 
+Server on port 6137 has started by 20992@Iaz7pc
+
+[2025-06-22 03:59:15 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 20992@Iaz7pc
+
+[2025-06-22 03:59:15 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 04:03:25 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 20992@Iaz7pc
+
+[2025-06-22 04:03:25 #5 server] 
+Server on port 6137 has stopped by 20992@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 04:03:39 #1 server] 
+Server on port 6137 has started by 40348@Iaz7pc
+
+[2025-06-22 04:03:41 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 40348@Iaz7pc
+
+[2025-06-22 04:03:41 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 04:05:42 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 40348@Iaz7pc
+
+[2025-06-22 04:05:42 #5 server] 
+Server on port 6137 has stopped by 40348@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 04:06:28 #1 server] 
+Server on port 6137 has started by 14924@Iaz7pc
+
+[2025-06-22 04:06:31 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 14924@Iaz7pc
+
+[2025-06-22 04:06:31 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 04:11:28 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 14924@Iaz7pc
+
+[2025-06-22 04:11:38 #5 server] 
+Server on port 6137 has stopped by 14924@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 04:11:45 #1 server] 
+Server on port 6137 has started by 25708@Iaz7pc
+
+[2025-06-22 04:14:16 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 25708@Iaz7pc
+
+[2025-06-22 04:14:16 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 04:17:54 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 25708@Iaz7pc
+
+[2025-06-22 04:17:56 #5 server] 
+Server on port 6137 has stopped by 25708@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 04:19:25 #1 server] 
+Server on port 6137 has started by 21092@Iaz7pc
+
+[2025-06-22 04:19:45 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 21092@Iaz7pc
+
+[2025-06-22 04:19:45 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 04:22:21 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 21092@Iaz7pc
+
+[2025-06-22 04:22:24 #5 server] 
+Server on port 6137 has stopped by 21092@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 04:22:33 #1 server] 
+Server on port 6137 has started by 21668@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 04:22:39 #1 server] 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(DualStackPlainSocketImpl.java:106)
+	at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:387)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:190)
+	at java.net.ServerSocket.bind(ServerSocket.java:390)
+	at java.net.ServerSocket.<init>(ServerSocket.java:252)
+	at java.net.ServerSocket.<init>(ServerSocket.java:196)
+	at com.objectdb.o.SMR.o(SMR.java:260)
+	at com.objectdb.o.SMR.f(SMR.java:160)
+	at com.objectdb.o.TOL.run(TOL.java:117)
+	at com.objectdb.Server.runCommand(Server.java:200)
+	at com.objectdb.Server.run(Server.java:104)
+	at com.objectdb.Server.main(Server.java:63)
+
+[2025-06-22 04:22:42 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 21668@Iaz7pc
+
+[2025-06-22 04:22:42 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 04:34:37 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 21668@Iaz7pc
+
+[2025-06-22 04:34:37 #5 server] 
+Server on port 6137 has stopped by 21668@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 04:34:51 #1 server] 
+Server on port 6137 has started by 9672@Iaz7pc
+
+[2025-06-22 04:34:52 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 9672@Iaz7pc
+
+[2025-06-22 04:34:52 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 04:39:03 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 9672@Iaz7pc
+
+[2025-06-22 04:39:03 #5 server] 
+Server on port 6137 has stopped by 9672@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 04:39:23 #1 server] 
+Server on port 6137 has started by 30592@Iaz7pc
+
+[2025-06-22 04:39:24 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 30592@Iaz7pc
+
+[2025-06-22 04:39:24 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 04:45:43 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 30592@Iaz7pc
+
+[2025-06-22 04:45:43 #5 server] 
+Server on port 6137 has stopped by 30592@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 04:48:26 #1 server] 
+Server on port 6137 has started by 16196@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 04:48:52 #1 server] 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(DualStackPlainSocketImpl.java:106)
+	at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:387)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:190)
+	at java.net.ServerSocket.bind(ServerSocket.java:390)
+	at java.net.ServerSocket.<init>(ServerSocket.java:252)
+	at java.net.ServerSocket.<init>(ServerSocket.java:196)
+	at com.objectdb.o.SMR.o(SMR.java:260)
+	at com.objectdb.o.SMR.f(SMR.java:160)
+	at com.objectdb.o.TOL.run(TOL.java:117)
+	at com.objectdb.Server.runCommand(Server.java:200)
+	at com.objectdb.Server.run(Server.java:104)
+	at com.objectdb.Server.main(Server.java:63)
+
+[2025-06-22 04:48:55 #2 server] 
+Server on port 6137 has stopped by 16196@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 04:49:01 #1 server] 
+Server on port 6137 has started by 36004@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 04:49:13 #1 explorer] 
+com.objectdb.o.UserException: Connection is closed
+	at com.objectdb.o.MSG.a(MSG.java:77)
+	at com.objectdb.o.CLS.B(CLS.java:340)
+	at com.objectdb.o.CLS.Y6(CLS.java:231)
+	at com.objectdb.o.CST.YC(CST.java:960)
+	at com.objectdb.o.DTP.g(DTP.java:121)
+	at com.objectdb.o.MainFrame.f(MainFrame.java:235)
+	at com.objectdb.o.MainFrame.f(MainFrame.java:233)
+	at com.objectdb.o.MainFrame.f(MainFrame.java:233)
+	at com.objectdb.o.MainFrame.f(MainFrame.java:233)
+	at com.objectdb.o.MainFrame.f(MainFrame.java:233)
+	at com.objectdb.o.MainFrame.e(MainFrame.java:218)
+	at com.objectdb.o.EXA.k(EXA.java:196)
+	at com.objectdb.o.EXA.j(EXA.java:188)
+	at com.objectdb.o.EXA.i(EXA.java:176)
+	at com.objectdb.o.RTR.Yw(RTR.java:102)
+	at com.objectdb.o.Command.actionPerformed(Command.java:471)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2313)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:297)
+	at java.desktop/java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:297)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6617)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6382)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2264)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4993)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2322)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4825)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4934)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4563)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4504)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2308)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2773)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4825)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+
+[2025-06-22 04:49:33 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 36004@Iaz7pc
+
+[2025-06-22 04:49:33 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 04:49:49 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 36004@Iaz7pc
+
+[2025-06-22 04:49:49 #5 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 36004@Iaz7pc
+
+[2025-06-22 04:49:49 #6 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 04:50:21 #7 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 36004@Iaz7pc
+
+[2025-06-22 04:50:21 #8 server] 
+Server on port 6137 has stopped by 36004@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 04:50:35 #1 server] 
+Server on port 6137 has started by 41528@Iaz7pc
+
+[2025-06-22 04:50:36 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 41528@Iaz7pc
+
+[2025-06-22 04:50:36 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 05:03:35 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 41528@Iaz7pc
+
+[2025-06-22 05:03:35 #5 server] 
+Server on port 6137 has stopped by 41528@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 05:03:56 #1 server] 
+Server on port 6137 has started by 32168@Iaz7pc
+
+[2025-06-22 05:04:03 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 32168@Iaz7pc
+
+[2025-06-22 05:04:03 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 05:05:11 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 32168@Iaz7pc
+
+[2025-06-22 05:05:11 #5 server] 
+Server on port 6137 has stopped by 32168@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 05:06:04 #1 server] 
+Server on port 6137 has started by 39684@Iaz7pc
+
+[2025-06-22 05:06:06 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 39684@Iaz7pc
+
+[2025-06-22 05:06:06 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 05:08:30 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 39684@Iaz7pc
+
+[2025-06-22 05:08:30 #5 server] 
+Server on port 6137 has stopped by 39684@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 05:08:44 #1 server] 
+Server on port 6137 has started by 29756@Iaz7pc
+
+[2025-06-22 05:08:54 #2 server] 
+Server on port 6137 has stopped by 29756@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 05:08:55 #1 server] 
+Server on port 6137 has started by 28740@Iaz7pc
+
+[2025-06-22 05:08:58 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 28740@Iaz7pc
+
+[2025-06-22 05:08:58 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 05:12:53 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 28740@Iaz7pc
+
+[2025-06-22 05:12:53 #5 server] 
+Server on port 6137 has stopped by 28740@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 05:13:08 #1 server] 
+Server on port 6137 has started by 5956@Iaz7pc
+
+[2025-06-22 05:13:11 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 5956@Iaz7pc
+
+[2025-06-22 05:13:11 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 05:13:44 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 5956@Iaz7pc
+
+[2025-06-22 05:13:46 #5 server] 
+Server on port 6137 has stopped by 5956@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 05:14:18 #1 explorer] 
+java.net.SocketException: Se ha anulado una conexi�n establecida por el software en su equipo host.
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:325)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:976)
+	at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:244)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:343)
+	at com.objectdb.o.NTS.n(NTS.java:329)
+	at com.objectdb.o.NTS.m(NTS.java:289)
+	at com.objectdb.o.CLS.z(CLS.java:350)
+	at com.objectdb.o.CLS.A(CLS.java:283)
+	at com.objectdb.o.CST.Zb(CST.java:638)
+	at com.objectdb.o.QRR.k(QRR.java:260)
+	at com.objectdb.o.QRR.i(QRR.java:154)
+	at com.objectdb.jpa.JpaQuery.getSingleResult(JpaQuery.java:710)
+	at com.objectdb.o.ETI.<init>(ETI.java:53)
+	at com.objectdb.o.SchemaPanel.n(SchemaPanel.java:260)
+	at com.objectdb.o.SchemaPanel.Yw(SchemaPanel.java:201)
+	at com.objectdb.o.RTR.Yw(RTR.java:71)
+	at com.objectdb.o.Command.actionPerformed(Command.java:471)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2313)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.AbstractButton.doClick(AbstractButton.java:374)
+	at java.desktop/javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:1022)
+	at java.desktop/javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:1066)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6617)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6382)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2264)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4993)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2322)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4825)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4934)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4563)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4504)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2308)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2773)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4825)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 05:16:15 #1 server] 
+Server on port 6137 has started by 25008@Iaz7pc
+
+[2025-06-22 05:16:22 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 25008@Iaz7pc
+
+[2025-06-22 05:16:22 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 05:19:31 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 25008@Iaz7pc
+
+[2025-06-22 05:19:31 #5 server] 
+Server on port 6137 has stopped by 25008@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 05:19:53 #1 server] 
+Server on port 6137 has started by 41920@Iaz7pc
+
+[2025-06-22 05:19:54 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 41920@Iaz7pc
+
+[2025-06-22 05:19:54 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 05:25:56 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 41920@Iaz7pc
+
+[2025-06-22 05:25:56 #5 server] 
+Server on port 6137 has stopped by 41920@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 05:26:20 #1 server] 
+Server on port 6137 has started by 31052@Iaz7pc
+
+[2025-06-22 05:26:21 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 31052@Iaz7pc
+
+[2025-06-22 05:26:21 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 05:27:21 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 31052@Iaz7pc
+
+[2025-06-22 05:27:24 #5 server] 
+Server on port 6137 has stopped by 31052@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 05:27:55 #1 server] 
+Server on port 6137 has started by 19940@Iaz7pc
+
+[2025-06-22 05:28:04 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 19940@Iaz7pc
+
+[2025-06-22 05:28:04 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 05:30:49 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 19940@Iaz7pc
+
+[2025-06-22 05:30:52 #5 server] 
+Server on port 6137 has stopped by 19940@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 05:31:25 #1 server] 
+Server on port 6137 has started by 36944@Iaz7pc
+
+[2025-06-22 05:31:29 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 36944@Iaz7pc
+
+[2025-06-22 05:31:29 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 05:33:11 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 36944@Iaz7pc
+
+[2025-06-22 05:38:50 #5 server] 
+Server on port 6137 has stopped by 36944@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 05:38:55 #1 server] 
+Server on port 6137 has started by 15720@Iaz7pc
+
+[2025-06-22 05:39:03 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 15720@Iaz7pc
+
+[2025-06-22 05:39:03 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 05:44:10 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 15720@Iaz7pc
+
+[2025-06-22 05:47:21 #5 server] 
+Server on port 6137 has stopped by 15720@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 05:48:09 #1 server] 
+Server on port 6137 has started by 31000@Iaz7pc
+
+[2025-06-22 05:48:22 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 31000@Iaz7pc
+
+[2025-06-22 05:48:22 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 05:48:43 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 31000@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 05:49:38 #1 server] 
+java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(DualStackPlainSocketImpl.java:106)
+	at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:387)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:190)
+	at java.net.ServerSocket.bind(ServerSocket.java:390)
+	at java.net.ServerSocket.<init>(ServerSocket.java:252)
+	at java.net.ServerSocket.<init>(ServerSocket.java:196)
+	at com.objectdb.o.SMR.o(SMR.java:260)
+	at com.objectdb.o.SMR.f(SMR.java:160)
+	at com.objectdb.o.TOL.run(TOL.java:117)
+	at com.objectdb.Server.runCommand(Server.java:200)
+	at com.objectdb.Server.run(Server.java:104)
+	at com.objectdb.Server.main(Server.java:63)
+
+[2025-06-22 05:49:45 #5 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 31000@Iaz7pc
+
+[2025-06-22 05:49:45 #6 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 05:51:24 #7 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 31000@Iaz7pc
+
+[2025-06-22 05:51:24 #8 server] 
+Server on port 6137 has stopped by 31000@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 05:54:01 #1 server] 
+Server on port 6137 has started by 24060@Iaz7pc
+
+[2025-06-22 05:54:06 #2 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 24060@Iaz7pc
+
+[2025-06-22 05:54:06 #3 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 05:56:04 #4 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 24060@Iaz7pc
+
+[2025-06-22 06:00:24 #5 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 24060@Iaz7pc
+
+[2025-06-22 06:00:24 #6 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 06:00:36 #7 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 24060@Iaz7pc
+
+[2025-06-22 06:00:49 #8 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is opened by 24060@Iaz7pc
+
+[2025-06-22 06:00:49 #9 store] 
+Configuration path: C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\objectdb.conf
+
+[2025-06-22 06:01:45 #10 store] 
+Database 'C:\Users\iaz7\source\repos\Proyecto_Polideportivo_IS\src\main\resources\objectdb-2.9.4\db\polideportivo.temp' is closed by 24060@Iaz7pc
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 09:46:10 #1 server] 
+Server on port 6137 has started by 31088@MacBook-Air-de-Maddi-5.local
+
+[2025-06-22 09:46:14 #2 store] 
+Database '/Users/maddilopez/Desktop/Maddi/UPV/2º/IS/ProyectoGlobal/Proyecto_Polideportivo_IS 2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is opened by 31088@MacBook-Air-de-Maddi-5.local
+
+[2025-06-22 09:46:14 #3 store] 
+Configuration path: /Users/maddilopez/Desktop/Maddi/UPV/2º/IS/ProyectoGlobal/Proyecto_Polideportivo_IS 2/src/main/resources/objectdb-2.9.4/objectdb.conf
+
+[2025-06-22 09:46:20 #4 store] 
+Database '/Users/maddilopez/Desktop/Maddi/UPV/2º/IS/ProyectoGlobal/Proyecto_Polideportivo_IS 2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is closed by 31088@MacBook-Air-de-Maddi-5.local
+
+[2025-06-22 09:46:20 #5 server] 
+Server on port 6137 has stopped by 31088@MacBook-Air-de-Maddi-5.local
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 09:52:19 #1 server] 
+Server on port 6137 has started by 31338@MacBook-Air-de-Maddi-5.local
+
+[2025-06-22 09:52:28 #2 store] 
+Database '/Users/maddilopez/Desktop/Maddi/UPV/2º/IS/ProyectoGlobal/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is opened by 31338@MacBook-Air-de-Maddi-5.local
+
+[2025-06-22 09:52:28 #3 store] 
+Configuration path: /Users/maddilopez/Desktop/Maddi/UPV/2º/IS/ProyectoGlobal/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/objectdb.conf
+
+[2025-06-22 10:08:53 #4 store] 
+Database '/Users/maddilopez/Desktop/Maddi/UPV/2º/IS/ProyectoGlobal/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is closed by 31338@MacBook-Air-de-Maddi-5.local
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 10:11:13 #1 server] 
+Server on port 6137 has started by 31758@MacBook-Air-de-Maddi-5.local
+
+[2025-06-22 10:11:33 #2 store] 
+Database '/Users/maddilopez/Desktop/Maddi/UPV/2º/IS/ProyectoGlobal/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is opened by 31758@MacBook-Air-de-Maddi-5.local
+
+[2025-06-22 10:11:33 #3 store] 
+Configuration path: /Users/maddilopez/Desktop/Maddi/UPV/2º/IS/ProyectoGlobal/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/objectdb.conf
+
+[2025-06-22 10:12:46 #4 store] 
+Database '/Users/maddilopez/Desktop/Maddi/UPV/2º/IS/ProyectoGlobal/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is closed by 31758@MacBook-Air-de-Maddi-5.local
+
+[2025-06-22 10:12:46 #5 server] 
+Server on port 6137 has stopped by 31758@MacBook-Air-de-Maddi-5.local
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 10:14:01 #1 server] 
+Server on port 6137 has started by 31848@MacBook-Air-de-Maddi-5.local
+
+[2025-06-22 10:14:14 #2 store] 
+Database '/Users/maddilopez/Desktop/Maddi/UPV/2º/IS/ProyectoGlobal/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is opened by 31848@MacBook-Air-de-Maddi-5.local
+
+[2025-06-22 10:14:14 #3 store] 
+Configuration path: /Users/maddilopez/Desktop/Maddi/UPV/2º/IS/ProyectoGlobal/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/objectdb.conf
+
+[2025-06-22 10:15:37 #4 store] 
+Database '/Users/maddilopez/Desktop/Maddi/UPV/2º/IS/ProyectoGlobal/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is closed by 31848@MacBook-Air-de-Maddi-5.local
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 10:16:26 #1 server] 
+Server on port 6137 has started by 31949@MacBook-Air-de-Maddi-5.local
+
+[2025-06-22 10:16:40 #2 store] 
+Database '/Users/maddilopez/Desktop/Maddi/UPV/2º/IS/ProyectoGlobal/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is opened by 31949@MacBook-Air-de-Maddi-5.local
+
+[2025-06-22 10:16:40 #3 store] 
+Configuration path: /Users/maddilopez/Desktop/Maddi/UPV/2º/IS/ProyectoGlobal/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/objectdb.conf
+
+[2025-06-22 10:20:49 #4 store] 
+Database '/Users/maddilopez/Desktop/Maddi/UPV/2º/IS/ProyectoGlobal/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is closed by 31949@MacBook-Air-de-Maddi-5.local
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 10:21:58 #1 server] 
+Server on port 6137 has started by 32103@MacBook-Air-de-Maddi-5.local
+
+[2025-06-22 10:22:11 #2 store] 
+Database '/Users/maddilopez/Desktop/Maddi/UPV/2º/IS/ProyectoGlobal/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is opened by 32103@MacBook-Air-de-Maddi-5.local
+
+[2025-06-22 10:22:11 #3 store] 
+Configuration path: /Users/maddilopez/Desktop/Maddi/UPV/2º/IS/ProyectoGlobal/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/objectdb.conf
+
+[2025-06-22 10:22:35 #4 store] 
+Database '/Users/maddilopez/Desktop/Maddi/UPV/2º/IS/ProyectoGlobal/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is closed by 32103@MacBook-Air-de-Maddi-5.local
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 10:23:26 #1 server] 
+Server on port 6137 has started by 32172@MacBook-Air-de-Maddi-5.local
+
+[2025-06-22 10:23:38 #2 store] 
+Database '/Users/maddilopez/Desktop/Maddi/UPV/2º/IS/ProyectoGlobal/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is opened by 32172@MacBook-Air-de-Maddi-5.local
+
+[2025-06-22 10:23:38 #3 store] 
+Configuration path: /Users/maddilopez/Desktop/Maddi/UPV/2º/IS/ProyectoGlobal/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/objectdb.conf
+
+[2025-06-22 10:24:37 #4 store] 
+Database '/Users/maddilopez/Desktop/Maddi/UPV/2º/IS/ProyectoGlobal/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is closed by 32172@MacBook-Air-de-Maddi-5.local
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 10:25:17 #1 server] 
+Server on port 6137 has started by 32263@MacBook-Air-de-Maddi-5.local
+
+[2025-06-22 10:25:26 #2 store] 
+Database '/Users/maddilopez/Desktop/Maddi/UPV/2º/IS/ProyectoGlobal/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is opened by 32263@MacBook-Air-de-Maddi-5.local
+
+[2025-06-22 10:25:26 #3 store] 
+Configuration path: /Users/maddilopez/Desktop/Maddi/UPV/2º/IS/ProyectoGlobal/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/objectdb.conf
+
+[2025-06-22 10:28:10 #4 store] 
+Database '/Users/maddilopez/Desktop/Maddi/UPV/2º/IS/ProyectoGlobal/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is closed by 32263@MacBook-Air-de-Maddi-5.local
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2025-06-22 10:29:55 #1 server] 
+Server on port 6137 has started by 32423@MacBook-Air-de-Maddi-5.local
+
+[2025-06-22 10:30:08 #2 store] 
+Database '/Users/maddilopez/Desktop/Maddi/UPV/2º/IS/ProyectoGlobal/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is opened by 32423@MacBook-Air-de-Maddi-5.local
+
+[2025-06-22 10:30:08 #3 store] 
+Configuration path: /Users/maddilopez/Desktop/Maddi/UPV/2º/IS/ProyectoGlobal/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/objectdb.conf
+
+[2025-06-22 10:40:04 #4 store] 
+Database '/Users/maddilopez/Desktop/Maddi/UPV/2º/IS/ProyectoGlobal/Proyecto_Polideportivo_IS-2/src/main/resources/objectdb-2.9.4/db/polideportivo.temp' is closed by 32423@MacBook-Air-de-Maddi-5.local
+

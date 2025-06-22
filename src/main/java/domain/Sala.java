@@ -32,7 +32,7 @@ public class Sala implements Serializable {
 	}
 
 	public Sala() {
-
+		this.sesiones = new ArrayList<>();
 	}
 
 	public String getNombreSala() {

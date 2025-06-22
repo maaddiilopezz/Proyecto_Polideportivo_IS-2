@@ -1,10 +1,5 @@
 package businessLogic;
 
-import java.time.LocalDate;
-
-import java.time.LocalTime;
-import java.util.Date;
-
 import domain.Usuario;
 import domain.Socio;
 import domain.Actividad;
@@ -21,9 +16,6 @@ import javax.jws.WebMethod;
 import javax.jws.WebService;
 import javax.swing.JLabel;
 
-/**
- * Interface that specifies the business logic.
- */
 @WebService
 public interface BLFacade {
 
@@ -38,13 +30,13 @@ public interface BLFacade {
 	public List<Sala> getTodasLasSalas();
 
 	@WebMethod
-	public List<Actividad> getActividades(); // si no hay restricción, devuelves todas
+	public List<Actividad> getActividades(); 
 
 	@WebMethod
 	public String getTipoUsuario(String correo);
 
 	@WebMethod
-	public void crearSesion(Actividad actividad, Sala sala, LocalDate fecha, LocalTime horaInicio, LocalTime horaFin);
+	public void crearSesion(Actividad actividad, Sala sala, String fecha, String horaInicio, String horaFin);
 
 	@WebMethod
 	public List<Sesion> getSesionesDeActividad(Actividad actividad);
@@ -73,10 +65,6 @@ public interface BLFacade {
 	@WebMethod
 	public List<Factura> getFacturasDeSocio(Socio socio);
 
-	// @WebMethod
-	// public Actividad crearActividad(String nombre, int nivelExigencia) throws
-	// ActividadAlreadyExistException;
-
 	@WebMethod
 	public Actividad crearActividad(String nombre, int nivelExigencia, double precio)
 			throws exceptions.ActividadAlreadyExistException;
@@ -85,10 +73,10 @@ public interface BLFacade {
 	public List<Socio> getSocios();
 
 	@WebMethod
-	public List<Factura> mandarFacturas(Socio socio, java.time.LocalDate fechaSemanal);
+	public List<Factura> mandarFacturas(Socio socio, String fechaSemanal);
 
 	@WebMethod
-	public List<Sesion> getSesionesDeSala(Sala sala, LocalDate fecha);
+	public List<Sesion> getSesionesDeSala(Sala sala, String fecha);
 
 	@WebMethod
 	public List<Factura> getFacturasPendientesDeSocio(Socio socio);

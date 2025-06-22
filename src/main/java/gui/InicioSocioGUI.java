@@ -17,7 +17,7 @@ public class InicioSocioGUI extends JFrame {
 	private Socio socio;
 
 	public InicioSocioGUI(Socio socio) {
-	    this.socio = socio;
+		this.socio = socio;
 		setTitle(ResourceBundleUtil.getString("InicioSocioGUI.Titulo"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -43,37 +43,37 @@ public class InicioSocioGUI extends JFrame {
 		labelQueHacer.setBounds(164, 21, 137, 16);
 		contentPane.add(labelQueHacer);
 		
-		JButton botonAtras = new JButton("\u2190"); // ←
+		JButton botonAtras = new JButton("\u2190");
 		botonAtras.setBounds(10, 10, 50, 25);
 		contentPane.add(botonAtras);
 
 		botonConsultarSesiones.addActionListener(e -> {
-		    try {
-		        System.out.println("Botón Consultar Sesiones pulsado");
-		        ConsultarSesionesGUI nuevaVentana = new ConsultarSesionesGUI(socio);
-		        nuevaVentana.setVisible(true);
-		        dispose();  // Cierra la ventana actual
-		    } catch (Exception ex) {
-		        ex.printStackTrace();
-		        JOptionPane.showMessageDialog(this, "Error al abrir ConsultarSesionesGUI: " + ex.getMessage());
-		    }
+			try {
+				System.out.println("Botón Consultar Sesiones pulsado");
+				ConsultarSesionesGUI nuevaVentana = new ConsultarSesionesGUI(socio);
+				nuevaVentana.setVisible(true);
+			dispose();
+			} catch (Exception ex) {
+				ex.printStackTrace();
+				JOptionPane.showMessageDialog(this, "Error al abrir ConsultarSesionesGUI: " + ex.getMessage());
+			}
 		});
 		
 		botonConsultarReservas.addActionListener(e -> {
-		    ConsultarReservasGUI nuevaVentana = new ConsultarReservasGUI(socio);
-		    nuevaVentana.setVisible(true);
-		    dispose();  
+			ConsultarReservasGUI nuevaVentana = new ConsultarReservasGUI(socio);
+			nuevaVentana.setVisible(true);
+			dispose();  
 		});
 		
 		botonConsultarFacturas.addActionListener(e -> {
-		    ConsultarFacturasGUI nuevaVentana = new ConsultarFacturasGUI(socio);
-		    nuevaVentana.setVisible(true);
-		    dispose();  
+			ConsultarFacturasGUI nuevaVentana = new ConsultarFacturasGUI(socio);
+			nuevaVentana.setVisible(true);
+			dispose();  
 		});
 		
 		botonAtras.addActionListener(e -> {
-		    new InicioGUI().setVisible(true);
-		    dispose();
+			new InicioGUI().setVisible(true);
+			dispose();
 		});
 	}
 }

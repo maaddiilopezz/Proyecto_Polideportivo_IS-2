@@ -53,6 +53,7 @@ public class AñadirActividadGUI extends JFrame {
         contentPane.add(btnCrear);
 
         JButton botonAtras = new JButton("\u2190"); // ←
+        // JButton botonAtras = new JButton("\u2190"); // Removed duplicate declaration
         botonAtras.setBounds(10, 10, 50, 25);
         contentPane.add(botonAtras);
         botonAtras.addActionListener(e -> {
