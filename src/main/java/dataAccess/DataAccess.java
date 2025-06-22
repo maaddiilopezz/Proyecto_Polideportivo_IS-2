@@ -764,6 +764,42 @@ public class DataAccess {
                 throw new Exception("Reserva no encontrada");
             Socio socio = reservaActual.getSocio();
             Sesion sesion = reservaActual.getSesion();
+
+            // Buscar y cancelar facturas que contengan esta reserva
+            if (socio != null) {
+                TypedQuery<Factura> queryFacturas = db.createQuery(
+                        "SELECT f FROM Factura f WHERE f.socio = :socio", Factura.class);
+                queryFacturas.setParameter("socio", socio);
+                List<Factura> facturas = queryFacturas.getResultList();
+
+                for (Factura factura : facturas) {
+                    if (factura.getReservas() != null && factura.getReservas().contains(reservaActual)) {
+                        System.out.println("[DEBUG] Cancelando factura asociada: " + factura.getCodigoFactura());
+
+                        // Remover la reserva de la factura
+                        factura.removeReserva(reservaActual);
+
+                        // Si la factura queda sin reservas, eliminarla completamente
+                        if (factura.getReservas().isEmpty()) {
+                            System.out
+                                    .println("[DEBUG] Eliminando factura sin reservas: " + factura.getCodigoFactura());
+                            socio.removeFactura(factura);
+                            db.remove(factura);
+                        } else {
+                            // Si aún tiene reservas, recalcular el precio
+                            double nuevoPrecio = 0;
+                            for (Reserva r : factura.getReservas()) {
+                                if (r.getSesion() != null && r.getSesion().getActividad() != null) {
+                                    nuevoPrecio += r.getSesion().getActividad().getPrecio();
+                                }
+                            }
+                            factura.setPrecio(nuevoPrecio);
+                            db.merge(factura);
+                        }
+                    }
+                }
+            }
+
             if (socio != null) {
                 socio = db.merge(socio);
                 socio.removeReserva(reservaActual);
@@ -782,6 +818,7 @@ public class DataAccess {
             }
             db.remove(reservaActual);
             db.getTransaction().commit();
+            System.out.println("[DEBUG] Reserva cancelada exitosamente con facturas asociadas");
         } catch (Exception e) {
             if (db.getTransaction().isActive())
                 db.getTransaction().rollback();
